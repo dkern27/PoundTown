@@ -7,6 +7,9 @@ import org.junit.Before;
 import org.junit.BeforeClass;
 import org.junit.Test;
 
+import FarmGame.Player;
+import FarmGame.*;
+
 import static org.junit.Assert.*;
 
 public class GeneralTests {
@@ -23,11 +26,11 @@ public class GeneralTests {
 		
 		//Load the players checklist
 		Player player = game.getPlayer();
-		ArrayList checklist = player.getChecklist();
+		ArrayList<Animal> checklist = player.getChecklist();
 		
 		//Find all the animals on the list
 		for( Animal a : checklist ) {
-			animal.found();
+			a.found();
 		}
 		
 		//All the animals should now be found

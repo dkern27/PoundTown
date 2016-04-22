@@ -20,7 +20,7 @@ public class AnimalTests {
 	
 	@Test
 	public void testDecimalMatchingBinary(){
-		int digits; //Need  to get from levels or animal or something
+		int digits=0; //Need  to get from levels or animal or something
 		for(Animal a : animals){
 			int dec = a.getDecimalValue();
 			String bin = Integer.toString(a.getBinaryValue());
