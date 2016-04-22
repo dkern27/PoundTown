@@ -3,10 +3,11 @@ package FarmGame;
 import java.util.ArrayList;
 
 public class Location {
-
+	
 	private String name;
 	private ArrayList<Animal> animals;
 	private String backgroundFile;
+
 	
 	
 	public Location() {
@@ -16,6 +17,10 @@ public class Location {
 	
 	public void draw(){
 		
+	}
+	
+	public ArrayList<Animal> getAnimals() {
+		return animals;
 	}
 
 }

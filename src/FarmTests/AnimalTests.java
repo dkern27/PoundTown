@@ -15,7 +15,9 @@ public class AnimalTests {
 	
 	@Before
 	public void setUp(){
-		
+		Level level = new Level(2);
+		//level.initialize(2); or something only allowing 2 digit binary numbers
+		//Get animals and store
 	}
 	
 	@Test
@@ -36,6 +38,40 @@ public class AnimalTests {
 			
 			assertEquals(dec, binValue);
 		}
+	}
+	
+	@Test
+	public void testAnimalValues(){
+		int num0 = 0;
+		int num1 = 0;
+		int num2 = 0;
+		int num3 = 0;
+		for(int i=0; i<50;i++){
+			Level l = new Level(2);
+			for(Animal a: l.getLocations().get(0).getAnimals()){
+				switch(a.getDecimalValue()){
+				case 0: 
+					num0++;
+					break;
+				case 1:
+					num1++;
+					break;
+				case 2:
+					num2++;
+					break;
+				case 3:
+					num3++;
+					break;
+				default:
+					fail("Number out of range for number of binary digits");
+				}
+			}
+	
+		}
+		assertTrue(num0>0);
+		assertTrue(num1>0);
+		assertTrue(num2>0);
+		assertTrue(num3>0);
 	}
 	
 	
