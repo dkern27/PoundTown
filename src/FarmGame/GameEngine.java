@@ -15,7 +15,7 @@ public class GameEngine {
 		//Initialize levels
 		levels = new ArrayList<Level>();
 		levels.add(0, null);
-		levels.add( 1, new Level( "LAVA", "AnimalImages/Pig.png"));
+		
 	}
 	
 	public void nextLevel() {

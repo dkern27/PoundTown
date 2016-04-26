@@ -8,20 +8,30 @@ public class Level {
 	private String name;
 	private String backgroundFile;
 	private ArrayList<Location> locations;
+	private CheckList checklist;
 	private int numDigits;
 	private ArrayList<Animal> animals;
 	private AnimalType animalType;
-	private String drawFile; //For animal
+	private String animalDrawFile; //For animal
 	private boolean levelComplete;
 	
 	
-	public Level( String name, String backgroundFile) {
+	public Level( String name, String backgroundFile, int numDigits, AnimalType animalType, String animalDrawFile ) {
 		this.name = name;
 		this.backgroundFile = backgroundFile;
+		this.numDigits = numDigits;
+		this.animalType = animalType;
+		this.animalDrawFile = animalDrawFile;
 		levelComplete = false;
 		
 		//Initialize animals
 		generateAnimals();
+		
+		//Create the checklist
+		checklist = new CheckList(animals);
+		
+		//Initialize locations
+		
 		
 	}
 	
@@ -33,16 +43,18 @@ public class Level {
 
 	public void generateAnimals() {
 		
-		//Caluclate the maximum possible value given the number of binary digits
+		//Calculate the maximum possible value given the number of binary digits
 		double maxNum = Math.pow(2, numDigits) - 1;
 		
 		//Make an array of all the possible animals
 		for( int i=0; i < maxNum; i++ ) {
-			animals.add( new Animal( animalType, drawFile, i, numDigits ));
-		}
-		
+			animals.add( new Animal( animalType, animalDrawFile, i, numDigits ));
+		}	
 	}
 	
+	public void levelComplete() {
+		
+	}
 
 ////// Getters and Setters //////
 	
