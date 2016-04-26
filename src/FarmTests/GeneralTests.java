@@ -23,7 +23,7 @@ public class GeneralTests {
 	@Before
 	public void setUp() {
 		game = new GameEngine();
-	}
+	} 
 	
 	@Test
 	public void testMoveToNextLevel() {
