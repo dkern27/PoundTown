@@ -14,6 +14,8 @@ public class MainGUI extends JFrame {
 		//Add the level map picture
 		LevelGUI levelMap = theGame.getLevels().get(theGame.getCurrentLevel()).draw();
 		add(levelMap, BorderLayout.EAST);
+		
+		//Add the checklist
 	}
 
 }
