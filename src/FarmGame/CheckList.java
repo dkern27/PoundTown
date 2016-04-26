@@ -1,20 +1,26 @@
 package FarmGame;
 
 import java.util.ArrayList;
+import java.util.Random;
 
 public class CheckList {
 
-	private ArrayList<Animal> checklist;
-	private ArrayList<Animal> found;
+	private ArrayList<Animal> animals;
+	private static final int NUM_ANIMALS_TO_FIND = 6;
 	
 	public CheckList(ArrayList<Animal> allAnimals) {
-		
+		Random rand = new Random();
+		while(animals.size() < NUM_ANIMALS_TO_FIND){
+			Animal a = allAnimals.get(rand.nextInt(allAnimals.size()));
+			if(!animals.contains(a))
+				animals.add(a);
+		}
 	}
 	
 	public boolean foundAll(){
 		
-		for (Animal animal: checklist) {
-			if (!found.contains(animal)) {
+		for (Animal animal: animals) {
+			if (!animal.getFound()) {
 				return false;
 			}
 		}
@@ -23,7 +29,7 @@ public class CheckList {
 
 
 	public ArrayList<Animal> getChecklist() {
-		return checklist;
+		return animals;
 	}
 
 }

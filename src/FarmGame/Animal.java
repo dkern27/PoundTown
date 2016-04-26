@@ -60,4 +60,8 @@ public class Animal {
 	public String getBinaryValue(){
 		return binaryValue;
 	}
+	
+	public boolean getFound(){
+		return found;
+	}
 }
