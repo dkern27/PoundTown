@@ -2,9 +2,12 @@ package FarmTests;
 
 import static org.junit.Assert.*;
 
+import java.util.ArrayList;
+
 import org.junit.BeforeClass;
 import org.junit.Test;
 
+import FarmGame.Animal;
 import FarmGame.GameEngine;
 import FarmGame.Level;
 import FarmGame.Location;
@@ -19,29 +22,16 @@ public class LevelTests {
 		//We will probably need to modify the BeforeClass once we start to write the methods
 		@BeforeClass
 		public static void setUp() {
-			level = new Level(1);
+			level = new Level("2",  "AnimalImages/Sheep.png");
 			gEngine = new GameEngine();
-			location = new Location();
+			
+			ArrayList<Animal> checklist = new ArrayList<Animal>();
+			ArrayList<Animal> allPossibleAnimals = new ArrayList<Animal>();
+			location = new Location("1", "AnimalImages/Chicken.png", checklist , allPossibleAnimals);
+			
+			
 		}
 	
-		//I am assuming we will have two methods to test in regards to converting binary numbers. Converting 
-		//decimal to binary and converting binary to decimal
-		@Test
-		public void testBinary() {
-			assertEquals(level.binaryToDecimal(0),0000);
-			assertEquals(level.binaryToDecimal(1),0001);
-			assertEquals(level.binaryToDecimal(3),0011);
-			assertEquals(level.binaryToDecimal(6),0110);
-			assertEquals(level.binaryToDecimal(15),1111);
-			//Tests the binary to decimal method
-			
-			assertEquals(level.decimalToBinary(0000),0);
-			assertEquals(level.decimalToBinary(0001),1);
-			assertEquals(level.decimalToBinary(0011),3);
-			assertEquals(level.decimalToBinary(0110),6);
-			assertEquals(level.decimalToBinary(1111),15);
-			//Tests the decimal to binary method
-		}
 		
 		@Test
 		public void levelOrderTest() {

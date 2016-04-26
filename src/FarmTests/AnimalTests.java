@@ -15,7 +15,7 @@ public class AnimalTests {
 	
 	@Before
 	public void setUp(){
-		Level level = new Level(2);
+		Level level = new Level("2",  "AnimalImages/Sheep.png");
 		//level.initialize(2); or something only allowing 2 digit binary numbers
 		//Get animals and store
 	}
@@ -47,7 +47,7 @@ public class AnimalTests {
 		int num2 = 0;
 		int num3 = 0;
 		for(int i=0; i<50;i++){
-			Level l = new Level(2);
+			Level l = new Level("2",  "AnimalImages/Sheep.png");
 			for(Animal a: l.getLocations().get(0).getAnimals()){
 				switch(a.getDecimalValue()){
 				case 0: 
