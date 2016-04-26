@@ -7,7 +7,7 @@ public class Level {
 	
 	private String name;
 	private String backgroundFile;
-	private ArrayList<Location> locations;
+	private ArrayList<Location> locations = new ArrayList();
 	private CheckList checklist;
 	private int numDigits;
 	private ArrayList<Animal> animals = new ArrayList();
