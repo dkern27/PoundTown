@@ -40,7 +40,11 @@ public class GameEngine {
 	public static void main(String[] args) {
 		
 		//Create the game, initializes in the constructor
-		GameEngine thegame = new GameEngine();
+		GameEngine theGame = new GameEngine();
+		
+		//Start the gui
+		MainGUI theGUI = new MainGUI( theGame );
+		theGUI.setVisible(true);
 		
 		
 	}
