@@ -4,31 +4,34 @@ import java.util.ArrayList;
 
 public class Level {
 	
-	private int name;
+	private String name;
 	private ArrayList<Location> locations;
 	private boolean levelComplete;
 	private String backgroundFile;
 	
-	public Level(int n) {
-		// TODO Auto-generated constructor stub
-		name = n;
-	}
-	
-	public void draw(){
+	public Level( String name, String backgroundFile) {
+		this.name = name;
+		this.backgroundFile = backgroundFile;
+		levelComplete = false;
+		
+		//Initialize locations
 		
 	}
 	
-	public int binaryToDecimal(int b) {
-		return 24;
+	public LevelGUI draw() {
+		LevelGUI gui = new LevelGUI( backgroundFile );
+		return gui;
 	}
 	
-	public int decimalToBinary(int d) {
-		return 25;
-	}
 
+////// Getters and Setters //////
 	
 	public ArrayList<Location> getLocations() {
 		return locations;
 	}
-	
+
+	public String getName() {
+		return name;
+	}
+
 }
