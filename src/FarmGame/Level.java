@@ -53,7 +53,7 @@ public class Level {
 	}
 	
 	public void levelComplete() {
-		
+		levelComplete = checklist.foundAll();
 	}
 
 ////// Getters and Setters //////
