@@ -29,7 +29,7 @@ public class Level {
 		checklist = new CheckList(animals);
 		
 		//Initialize locations
-		
+		generateLocations();
 		
 	}
 	
@@ -48,6 +48,10 @@ public class Level {
 		for( int i=0; i < maxNum; i++ ) {
 			animals.add( new Animal( animalType, animalDrawFile, i, numDigits ));
 		}	
+	}
+	
+	public void generateLocations() {
+		
 	}
 	
 	public boolean levelComplete() {
