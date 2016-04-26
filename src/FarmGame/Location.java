@@ -16,6 +16,7 @@ public class Location {
 		this.name = name;
 		this.backgroundFile=backgroundFile;
 		
+		//Populate location with animals
 		Random rand = new Random();
 		correctAnimal = checklist.get(rand.nextInt(checklist.size()));
 		animals.add(correctAnimal);

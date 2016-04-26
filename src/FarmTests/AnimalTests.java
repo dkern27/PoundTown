@@ -16,6 +16,7 @@ public class AnimalTests {
 	@Before
 	public void setUp(){
 		Level level = new Level("2",  "AnimalImages/Sheep.png");
+		animals = level.getAnimalsList();
 		//level.initialize(2); or something only allowing 2 digit binary numbers
 		//Get animals and store
 	}
