@@ -30,26 +30,8 @@ public class Level {
 		LevelGUI gui = new LevelGUI( backgroundFile );
 		return gui;
 	}
-	
-<<<<<<< HEAD
-	public String decimalToBinary(int dec) {
-		
-		//This is the final
-		if (dec==0)
-			return "0";
-		if (dec==1)
-			return "1";
-		
-		int temp = 2;
-		while (temp <= dec){ //finds the highest multiple of two, but this will multiply by 2 too many times
-			temp=temp*2;
-		}
-		temp=temp/2; //so divide once.
 
-		return (dec % 2 + decimalToBinary(dec-temp)); //adds a 0 or 1 depending
 
-	}
-=======
 	public void generateAnimals() {
 		
 		//Caluclate the maximum possible value given the number of binary digits
@@ -62,7 +44,6 @@ public class Level {
 		
 	}
 	
->>>>>>> origin/master
 
 ////// Getters and Setters //////
 	
