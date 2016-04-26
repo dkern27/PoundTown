@@ -71,6 +71,10 @@ public class Level {
 	public String getName() {
 		return name;
 	}
+	
+	public int getDigits(){
+		return numDigits;
+	}
 
 
 

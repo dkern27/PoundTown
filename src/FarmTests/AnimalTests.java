@@ -11,11 +11,12 @@ import org.junit.Test;
 
 public class AnimalTests {
 
+	Level level;
 	ArrayList<Animal> animals;
 	
 	@Before
 	public void setUp(){
-		Level level = new Level("2",  "AnimalImages/Sheep.png", 3, AnimalType.PIG,"AnimalImages/Pig.png");
+		level = new Level("2",  "AnimalImages/Sheep.png", 3, AnimalType.PIG,"AnimalImages/Pig.png");
 		animals = level.getAnimalsList();
 		//level.initialize(2); or something only allowing 2 digit binary numbers
 		//Get animals and store
@@ -23,7 +24,7 @@ public class AnimalTests {
 	
 	@Test
 	public void testDecimalMatchingBinary(){
-		int digits=0; //Need  to get from levels or animal or something
+		int digits=level.getDigits(); //Need  to get from levels or animal or something
 		for(Animal a : animals){
 			int dec = a.getDecimalValue();
 			String bin = a.getBinaryValue();
