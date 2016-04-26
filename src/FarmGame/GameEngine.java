@@ -4,7 +4,6 @@ import java.util.ArrayList;
 
 public class GameEngine {
 
-	private CheckList player;
 	private ArrayList<Level> levels;
 	private int currentLevel;
 	private final int maxLevel = 3;
@@ -20,7 +19,7 @@ public class GameEngine {
 	
 	public void nextLevel() {
 		//Move to next level if the player has found all the animals
-		if( player.foundAll() ) {
+		if( levels.get(currentLevel).levelComplete() ) {
 			currentLevel++;
 		}
 		else {
@@ -52,9 +51,6 @@ public class GameEngine {
 	
 ////// Getters and Setters //////
 	
-	public CheckList getPlayer() {
-		return player;
-	}
 
 	public ArrayList<Level> getLevels() {
 		return levels;

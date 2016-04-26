@@ -28,17 +28,16 @@ public class GeneralTests {
 	@Test
 	public void testMoveToNextLevel() {
 		
-		//Load the players checklist
-		CheckList player = game.getPlayer();
-		ArrayList<Animal> checklist = player.getChecklist();
+		//Load the checklist
+		CheckList checklist = game.getLevels().get(game.getCurrentLevel()).getChecklist();
 		
 		//Find all the animals on the list
-		for( Animal a : checklist ) {
-			a.found(checklist);
+		for( Animal a : checklist.getChecklist() ) {
+			a.found(checklist.getChecklist());
 		}
 		
 		//All the animals should now be found
-		assertTrue( player.foundAll() );
+		assertTrue( checklist.foundAll() );
 		
 		//Move to the next level, will trigger if foundAll() is true
 		game.nextLevel();

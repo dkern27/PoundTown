@@ -13,7 +13,6 @@ public class Level {
 	private ArrayList<Animal> animals;
 	private AnimalType animalType;
 	private String animalDrawFile; //For animal
-	private boolean levelComplete;
 	
 	
 	public Level( String name, String backgroundFile, int numDigits, AnimalType animalType, String animalDrawFile ) {
@@ -22,7 +21,6 @@ public class Level {
 		this.numDigits = numDigits;
 		this.animalType = animalType;
 		this.animalDrawFile = animalDrawFile;
-		levelComplete = false;
 		
 		//Initialize animals
 		generateAnimals();
@@ -52,8 +50,8 @@ public class Level {
 		}	
 	}
 	
-	public void levelComplete() {
-		levelComplete = checklist.foundAll();
+	public boolean levelComplete() {
+		return checklist.foundAll();
 	}
 
 ////// Getters and Setters //////
@@ -65,7 +63,11 @@ public class Level {
 	public ArrayList<Animal> getAnimalsList() {
 		return animals;
 	}
-
+	
+	public CheckList getChecklist() {
+		return checklist;
+	}
+	
 	public String getName() {
 		return name;
 	}
