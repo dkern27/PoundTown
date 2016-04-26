@@ -5,6 +5,7 @@ import java.util.ArrayList;
 public class Player {
 
 	private ArrayList<Animal> checklist;
+	private ArrayList<Animal> found;
 	
 	public Player() {
 		// TODO Auto-generated constructor stub
@@ -12,9 +13,12 @@ public class Player {
 	
 	public boolean foundAll(){
 		
-		//implement
-		
-		return false;
+		for (Animal animal: checklist) {
+			if (!found.contains(animal)) {
+				return false;
+			}
+		}
+		return true;
 	}
 
 
