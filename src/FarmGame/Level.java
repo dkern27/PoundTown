@@ -30,11 +30,6 @@ public class Level {
 		LevelGUI gui = new LevelGUI( backgroundFile );
 		return gui;
 	}
-<<<<<<< HEAD
-	
-=======
->>>>>>> origin/master
-
 
 	public void generateAnimals() {
 		
