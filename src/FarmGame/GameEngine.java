@@ -4,14 +4,14 @@ import java.util.ArrayList;
 
 public class GameEngine {
 
-	private Player player;
+	private CheckList player;
 	private ArrayList<Level> levels;
 	private int currentLevel;
 	private final int maxLevel = 3;
 	
 	public GameEngine() {
 		//Create the player and start on level one
-		player = new Player();
+		player = new CheckList();
 		currentLevel = 1;
 		
 		//Initialize levels
@@ -54,7 +54,7 @@ public class GameEngine {
 	
 ////// Getters and Setters //////
 	
-	public Player getPlayer() {
+	public CheckList getPlayer() {
 		return player;
 	}
 

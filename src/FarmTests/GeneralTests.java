@@ -8,7 +8,7 @@ import org.junit.BeforeClass;
 import org.junit.Test;
 
 
-import FarmGame.Player;
+import FarmGame.CheckList;
 import FarmGame.*;
 
 import FarmGame.GameEngine;
@@ -29,7 +29,7 @@ public class GeneralTests {
 	public void testMoveToNextLevel() {
 		
 		//Load the players checklist
-		Player player = game.getPlayer();
+		CheckList player = game.getPlayer();
 		ArrayList<Animal> checklist = player.getChecklist();
 		
 		//Find all the animals on the list
