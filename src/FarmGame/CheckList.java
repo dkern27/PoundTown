@@ -2,13 +2,13 @@ package FarmGame;
 
 import java.util.ArrayList;
 
-public class Player {
+public class CheckList {
 
 	private ArrayList<Animal> checklist;
 	private ArrayList<Animal> found;
 	
-	public Player() {
-		// TODO Auto-generated constructor stub
+	public CheckList(ArrayList<Animal> allAnimals) {
+		
 	}
 	
 	public boolean foundAll(){

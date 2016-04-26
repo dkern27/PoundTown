@@ -1,5 +1,6 @@
 package FarmGame;
 
+import java.awt.Graphics;
 import java.util.ArrayList;
 import java.util.Random;
 
@@ -30,7 +31,7 @@ public class Location {
 	
 	
 	
-	public void draw(){
+	public void draw(Graphics g){
 		
 	}
 	
