@@ -25,7 +25,7 @@ public class AnimalTests {
 		int digits=0; //Need  to get from levels or animal or something
 		for(Animal a : animals){
 			int dec = a.getDecimalValue();
-			String bin = Integer.toString(a.getBinaryValue());
+			String bin = a.getBinaryValue();
 			int binValue=0;
 			
 			//Probably have a function somewhere else to do this

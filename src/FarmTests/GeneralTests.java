@@ -34,7 +34,7 @@ public class GeneralTests {
 		
 		//Find all the animals on the list
 		for( Animal a : checklist ) {
-			a.found();
+			a.found(checklist);
 		}
 		
 		//All the animals should now be found
