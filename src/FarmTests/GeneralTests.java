@@ -21,7 +21,7 @@ public class GeneralTests {
 	private static GameEngine game;
 	
 	@Before
-	public static void setUp() {
+	public void setUp() {
 		game = new GameEngine();
 	}
 	
