@@ -18,13 +18,14 @@ public class AnimalTests {
 	public void setUp(){
 		level = new Level("2",  "AnimalImages/Sheep.png", 3, AnimalType.PIG,"AnimalImages/Pig.png");
 		animals = level.getAnimalsList();
-		//level.initialize(2); or something only allowing 2 digit binary numbers
-		//Get animals and store
 	}
 	
 	@Test
 	public void testDecimalMatchingBinary(){
-		int digits=level.getDigits(); //Need  to get from levels or animal or something
+		int digits=level.getDigits();
+		for(Animal a: animals)
+			System.out.println(a.getBinaryValue());
+		
 		for(Animal a : animals){
 			int dec = a.getDecimalValue();
 			String bin = a.getBinaryValue();
@@ -37,7 +38,6 @@ public class AnimalTests {
 					binValue += Math.pow(2, (digits-1-i)); 
 				}
 			}
-			
 			assertEquals(dec, binValue);
 		}
 	}

@@ -18,7 +18,7 @@ public class Animal {
 		this.drawFile = drawFile;
 		this.digits = digits;
 		this.decimalValue = decimalValue;
-		binaryValue = convertToBinary();
+		binaryValue = convertToBinary(decimalValue);
 		
 	}
 
@@ -35,12 +35,12 @@ public class Animal {
 	}
 	
 	//Helper function to convert decimal to binary
-	public String convertToBinary(){
-		int binaryDigitValue = (int) Math.pow(2, digits);
+	public String convertToBinary(int decNumber){
+		int binaryDigitValue = (int) Math.pow(2, digits-1);
 		String binaryNumber = "";
-		while(decimalValue != 0){
-			if(decimalValue - binaryDigitValue >= 0){
-				decimalValue -= binaryDigitValue;
+		for(int i=0; i < digits; i++){
+			if(decNumber - binaryDigitValue >= 0){
+				decNumber -= binaryDigitValue;
 				binaryNumber += "1";
 			}
 			else{
