@@ -27,6 +27,7 @@ public class LevelTests {
 			gEngine = new GameEngine();
 			
 			ArrayList<Animal> checklist = new ArrayList<Animal>();
+			//checklist.add()
 			ArrayList<Animal> allPossibleAnimals = new ArrayList<Animal>();
 			location = new Location("1", "AnimalImages/Chicken.png", checklist , allPossibleAnimals);
 			
