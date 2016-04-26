@@ -10,7 +10,7 @@ public class Level {
 	private ArrayList<Location> locations;
 	private CheckList checklist;
 	private int numDigits;
-	private ArrayList<Animal> animals;
+	private ArrayList<Animal> animals = new ArrayList();
 	private AnimalType animalType;
 	private String animalDrawFile; //For animal
 	

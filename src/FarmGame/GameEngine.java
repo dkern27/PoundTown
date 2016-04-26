@@ -9,11 +9,12 @@ public class GameEngine {
 	private final int maxLevel = 3;
 	
 	public GameEngine() {
-		
+		currentLevel = 1;
 		
 		//Initialize levels
 		levels = new ArrayList<Level>();
 		levels.add(0, null);
+		levels.add(1, new Level( "Lava", "AnimalImages/Pig.png", 4, AnimalType.PIG, "AnimalImages/Pig.png"));
 		
 	}
 	
