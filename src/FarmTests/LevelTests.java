@@ -8,6 +8,7 @@ import org.junit.BeforeClass;
 import org.junit.Test;
 
 import FarmGame.Animal;
+import FarmGame.AnimalType;
 import FarmGame.GameEngine;
 import FarmGame.Level;
 import FarmGame.Location;
@@ -22,7 +23,7 @@ public class LevelTests {
 		//We will probably need to modify the BeforeClass once we start to write the methods
 		@BeforeClass
 		public static void setUp() {
-			level = new Level("2",  "AnimalImages/Sheep.png");
+			level = new Level("2",  "AnimalImages/Sheep.png", 3, AnimalType.PIG,"AnimalImages/Pig.png");
 			gEngine = new GameEngine();
 			
 			ArrayList<Animal> checklist = new ArrayList<Animal>();
