@@ -10,9 +10,7 @@ public class GameEngine {
 	private final int maxLevel = 3;
 	
 	public GameEngine() {
-		//Create the player and start on level one
-		player = new CheckList();
-		currentLevel = 1;
+		
 		
 		//Initialize levels
 		levels = new ArrayList<Level>();
