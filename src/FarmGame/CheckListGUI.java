@@ -1,5 +1,6 @@
 package FarmGame;
 
+import java.awt.Dimension;
 import java.awt.Font;
 import java.awt.GridLayout;
 import java.awt.font.TextAttribute;
@@ -25,21 +26,29 @@ public class CheckListGUI extends JPanel {
 	}
 
 	public void makeLayout(){
-		setLayout(new GridLayout(3,2));
+		setLayout(new GridLayout(2,0));
 		JPanel listOfAnimals = animals();
 		add(listOfAnimals);
 	}
 
 	private JPanel animals(){
 		JPanel panel = new JPanel();
-		panel.setLayout(new GridLayout(8,1));
-		panel.setBorder(new TitledBorder(new EtchedBorder(), "Checklist"));
+		panel.setLayout(new GridLayout(7,1));
+		panel.setBorder(new TitledBorder(new EtchedBorder(), ""));
 
+		Font font = new Font("Comic Sans MS", Font.PLAIN, 25);
 		JLabel field = new JLabel("Animals to Find:");
+		field.setFont(font);
+
+		field.setPreferredSize( new Dimension(200,100) );
+		
+		field.setHorizontalAlignment(JLabel.CENTER);
+	    field.setVerticalAlignment(JLabel.CENTER);
+		
 		panel.add(field);
 
 		for (Animal a : animals){
-			panel.add( animal( a) );
+			panel.add( animal( a ) );
 		}
 
 		return panel;
@@ -49,7 +58,7 @@ public class CheckListGUI extends JPanel {
 		
 		JLabel number = new JLabel( Integer.toString(animal.getDecimalValue()) );
 		
-		Font font = new Font("helvetica", Font.PLAIN, 12);
+		Font font = new Font("Comic Sans MS", Font.PLAIN, 50);
 		
 		if( animal.getFound() ) {
 			Map attributes = font.getAttributes();
@@ -58,6 +67,9 @@ public class CheckListGUI extends JPanel {
 		}
 		
 		number.setFont(font);
+	    
+	    number.setHorizontalAlignment(JLabel.CENTER);
+	    number.setVerticalAlignment(JLabel.CENTER);
 		
 		return number;
 	}
