@@ -1,7 +1,10 @@
 package FarmGame;
 
+import java.awt.Font;
 import java.awt.GridLayout;
+import java.awt.font.TextAttribute;
 import java.util.ArrayList;
+import java.util.Map;
 
 import javax.swing.JCheckBox;
 import javax.swing.JComboBox;
@@ -14,34 +17,50 @@ import javax.swing.border.TitledBorder;
 public class CheckListGUI extends JPanel {
 
 	ArrayList<Animal> animals = new ArrayList<Animal>();
-	
+
 	public CheckListGUI(ArrayList<Animal> animals){
-			this.animals = animals;
-			setLayout(new GridLayout(1,0));
-			makeLayout();
+		this.animals = animals;
+		setLayout(new GridLayout(1,0));
+		makeLayout();
+	}
+
+	public void makeLayout(){
+		setLayout(new GridLayout(3,2));
+		JPanel listOfAnimals = animals();
+		add(listOfAnimals);
+	}
+
+	private JPanel animals(){
+		JPanel panel = new JPanel();
+		panel.setLayout(new GridLayout(8,1));
+		panel.setBorder(new TitledBorder(new EtchedBorder(), "Checklist"));
+
+		JLabel field = new JLabel("Animals to Find:");
+		panel.add(field);
+
+		for (Animal a : animals){
+			panel.add( animal( a) );
+		}
+
+		return panel;
+	}
+	
+	private JLabel animal( Animal animal ) {
+		
+		JLabel number = new JLabel( Integer.toString(animal.getDecimalValue()) );
+		
+		Font font = new Font("helvetica", Font.PLAIN, 12);
+		
+		if( animal.getFound() ) {
+			Map attributes = font.getAttributes();
+			attributes.put(TextAttribute.STRIKETHROUGH, TextAttribute.STRIKETHROUGH_ON);
+			font = new Font(attributes);
 		}
 		
-		public void makeLayout(){
-			setLayout(new GridLayout(3,2));
-			JPanel listOfAnimals = animals();
-			add(listOfAnimals);
-		}
+		number.setFont(font);
 		
-		private JPanel animals(){
-			JPanel panel = new JPanel();
-			panel.setLayout(new GridLayout(8,1));
-			panel.setBorder(new TitledBorder(new EtchedBorder(), "Checklist"));
-			
-			JLabel field = new JLabel("Animals to Find:");
-			panel.add(field);
-			
-			for (Animal a : animals){
-				JCheckBox check = new JCheckBox(Integer.toString(a.getDecimalValue()));
-				check.setEnabled(false);
-				check.setSelected(a.getFound());
-				panel.add(check);
-			}
-			
-			return panel;
-		}
+		return number;
+	}
+	
+	
 }
