@@ -25,7 +25,7 @@ public class LevelTests {
 		public static void setUp() {
 			level = new Level("2",  "AnimalImages/Sheep.png", 3, AnimalType.PIG,"AnimalImages/Pig.png");
 			gEngine = new GameEngine();
-
+			//System.out.println(level.getAnimalsList().size());
 			location = new Location("1", "AnimalImages/Chicken.png", level.getChecklist().getChecklist(), level.getAnimalsList());
 			
 			

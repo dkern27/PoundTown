@@ -31,5 +31,9 @@ public class CheckList {
 	public ArrayList<Animal> getChecklist() {
 		return animals;
 	}
+	
+	public void setChecklist(ArrayList<Animal> check){
+		animals = check;
+	}
 
 }

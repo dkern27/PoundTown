@@ -7,7 +7,7 @@ import java.util.Random;
 public class Location {
 	
 	private String name;
-	private ArrayList<Animal> animals;
+	private ArrayList<Animal> animals = new ArrayList<Animal>();
 	private String backgroundFile;
 	private Animal correctAnimal;
 	private static final int NUM_ANIMALS = 6;
