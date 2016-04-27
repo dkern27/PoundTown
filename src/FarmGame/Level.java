@@ -51,7 +51,10 @@ public class Level {
 	}
 	
 	public void generateLocations() {
-		
+		locations.add( new Location( "name", LocationType.POND, checklist.getChecklist(), animals) );
+		locations.add( new Location( "name", LocationType.FOREST, checklist.getChecklist(), animals) );
+		locations.add( new Location( "name", LocationType.FIELD, checklist.getChecklist(), animals) );
+		locations.add( new Location( "name", LocationType.VOLCANO, checklist.getChecklist(), animals) );
 	}
 	
 	public boolean levelComplete() {
