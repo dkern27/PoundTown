@@ -25,7 +25,7 @@ public class Animal {
 	public boolean found(ArrayList<Animal> checklist){
 		if(checklist.contains(this)){
 			found = true;
-			return false;
+			return true; //This should be true right? It was false before
 		}
 		return false;
 	}
@@ -63,5 +63,9 @@ public class Animal {
 	
 	public boolean getFound(){
 		return found;
+	}
+	
+	public void setFound(boolean f){
+		found = f;
 	}
 }
