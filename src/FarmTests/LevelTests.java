@@ -13,6 +13,7 @@ import FarmGame.AnimalType;
 import FarmGame.GameEngine;
 import FarmGame.Level;
 import FarmGame.Location;
+import FarmGame.LocationType;
 
 public class LevelTests {
 	
@@ -27,7 +28,7 @@ public class LevelTests {
 //			level = new Level("2",  "AnimalImages/Sheep.png", 4, AnimalType.PIG,"AnimalImages/Pig.png");
 			gEngine = new GameEngine();
 			//System.out.println(level.getAnimalsList().size());
-			location = new Location("1", "AnimalImages/Chicken.png", gEngine.getLevels().get(1).getChecklist().getChecklist(), gEngine.getLevels().get(1).getAnimalsList());
+			location = new Location("1", LocationType.POND, gEngine.getLevels().get(1).getChecklist().getChecklist(), gEngine.getLevels().get(1).getAnimalsList());
 			
 			
 		}

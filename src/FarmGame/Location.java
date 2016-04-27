@@ -2,20 +2,26 @@ package FarmGame;
 
 import java.awt.Graphics;
 import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.Map;
 import java.util.Random;
 
 public class Location {
 	
 	private String name;
 	private ArrayList<Animal> animals = new ArrayList<Animal>();
-	private String backgroundFile;
 	private Animal correctAnimal;
+	private String backgroundFile;
+	
+	
+	
+	
 	private static final int NUM_ANIMALS = 6;
 
-	public Location(String name, String backgroundFile, ArrayList<Animal> checklist, ArrayList<Animal> allPossibleAnimals) {
+	public Location(String name, LocationType locationType, ArrayList<Animal> checklist, ArrayList<Animal> allPossibleAnimals) {
 		this.name = name;
-		this.backgroundFile=backgroundFile;
 		
+		backgroundFile = locationType.getfileName();
 		//Populate location with animals
 		Random rand = new Random();
 		correctAnimal = checklist.get(rand.nextInt(checklist.size()));
