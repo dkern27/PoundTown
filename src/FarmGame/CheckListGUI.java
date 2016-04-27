@@ -5,6 +5,7 @@ import java.util.ArrayList;
 
 import javax.swing.JCheckBox;
 import javax.swing.JComboBox;
+import javax.swing.JLabel;
 import javax.swing.JPanel;
 import javax.swing.JTextField;
 import javax.swing.border.EtchedBorder;
@@ -31,9 +32,7 @@ public class CheckListGUI extends JPanel {
 			panel.setLayout(new GridLayout(8,1));
 			panel.setBorder(new TitledBorder(new EtchedBorder(), "Checklist"));
 			
-		 	JTextField field = new JTextField((int)(15));
-		 	field.setEditable(false);
-		 	field.setText("Animals to Find:");
+			JLabel field = new JLabel("Animals to Find:");
 			panel.add(field);
 			
 			for (Animal a : animals){

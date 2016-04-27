@@ -50,7 +50,7 @@ public class AnimalTests {
 		int num3 = 0;
 		for(int i=0; i<50;i++){
 			//String name, String backgroundFile, int numDigits, AnimalType animalType, String animalDrawFile 
-			Level l = new Level("2",  "AnimalImages/Sheep.png", 3, AnimalType.PIG,"AnimalImages/Pig.png");
+			Level l = new Level("2",  "AnimalImages/Sheep.png", 2, AnimalType.PIG,"AnimalImages/Pig.png");
 			for(Animal a: l.getLocations().get(0).getAnimals()){
 				switch(a.getDecimalValue()){
 				case 0: 
