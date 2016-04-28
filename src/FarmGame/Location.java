@@ -39,7 +39,8 @@ public class Location {
 	
 	
 	public void draw(Graphics g){
-		
+		LocationGUI gui = new LocationGUI(backgroundFile);
+		//Draw animals
 	}
 	
 	public ArrayList<Animal> getAnimals() {
