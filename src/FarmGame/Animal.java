@@ -1,7 +1,14 @@
 package FarmGame;
 
 import java.awt.Graphics;
+import java.awt.image.BufferedImage;
+import java.io.File;
+import java.io.IOException;
 import java.util.ArrayList;
+
+import javax.imageio.ImageIO;
+import javax.swing.ImageIcon;
+import javax.swing.JLabel;
 
 public class Animal {
 
@@ -30,8 +37,15 @@ public class Animal {
 		return false;
 	}
 	
-	public void draw(Graphics g){
-		
+	public void draw(Graphics g, int x, int y){
+		BufferedImage animalImage = null;
+		try {
+			animalImage = ImageIO.read( new File(drawFile) );
+		} catch (IOException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		g.drawImage(animalImage, x, y, null);
 	}
 	
 	//Helper function to convert decimal to binary
