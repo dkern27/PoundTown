@@ -23,8 +23,6 @@ public class AnimalTests {
 	@Test
 	public void testDecimalMatchingBinary(){
 		int digits=level.getDigits();
-		for(Animal a: animals)
-			System.out.println(a.getBinaryValue());
 		
 		for(Animal a : animals){
 			int dec = a.getDecimalValue();
@@ -48,9 +46,13 @@ public class AnimalTests {
 		int num1 = 0;
 		int num2 = 0;
 		int num3 = 0;
-		for(int i=0; i<50;i++){
+		int num4 = 0;
+		int num5 = 0;
+		int num6 = 0;
+		int num7 = 0;
+		for(int i=0; i<10;i++){
 			//String name, String backgroundFile, int numDigits, AnimalType animalType, String animalDrawFile 
-			Level l = new Level("2",  "AnimalImages/Sheep.png", 2, AnimalType.PIG,"AnimalImages/Pig.png");
+			Level l = new Level("1",  "AnimalImages/Sheep.png", 3, AnimalType.PIG, "AnimalImages/Pig.png");
 			for(Animal a: l.getLocations().get(0).getAnimals()){
 				switch(a.getDecimalValue()){
 				case 0: 
@@ -65,6 +67,18 @@ public class AnimalTests {
 				case 3:
 					num3++;
 					break;
+				case 4: 
+					num4++;
+					break;
+				case 5:
+					num5++;
+					break;
+				case 6:
+					num6++;
+					break;
+				case 7:
+					num7++;
+					break;
 				default:
 					fail("Number out of range for number of binary digits");
 				}
@@ -75,6 +89,10 @@ public class AnimalTests {
 		assertTrue(num1>0);
 		assertTrue(num2>0);
 		assertTrue(num3>0);
+		assertTrue(num4>0);
+		assertTrue(num5>0);
+		assertTrue(num6>0);
+		assertTrue(num7>0);
 	}
 	
 	
