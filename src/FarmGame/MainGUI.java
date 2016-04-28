@@ -11,12 +11,12 @@ public class MainGUI extends JFrame {
 		setSize(1000, 500);
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 
-		//Add the level map picture
+		//Add the level map picture	
 		LevelGUI levelMap = theGame.getLevels().get(theGame.getCurrentLevel()).draw();
 		add(levelMap, BorderLayout.CENTER);
 		
 		//Add the checklist
-		CheckListGUI checklist = new CheckListGUI(theGame.getLevels().get(theGame.getCurrentLevel()).getChecklist().getChecklist());
+		CheckListGUI checklist = theGame.getLevels().get(theGame.getCurrentLevel()).getChecklist().draw();
 		add(checklist, BorderLayout.WEST);
 	}
 

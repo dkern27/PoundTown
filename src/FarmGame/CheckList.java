@@ -26,7 +26,14 @@ public class CheckList {
 		}
 		return true;
 	}
-
+	
+	public CheckListGUI draw() {
+		CheckListGUI gui = new CheckListGUI( animals );
+		return gui;
+	}
+	
+	
+////// Getters and Setters //////
 
 	public ArrayList<Animal> getChecklist() {
 		return animals;

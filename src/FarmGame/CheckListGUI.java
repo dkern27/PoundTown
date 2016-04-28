@@ -1,5 +1,6 @@
 package FarmGame;
 
+import java.awt.BorderLayout;
 import java.awt.Dimension;
 import java.awt.Font;
 import java.awt.GridLayout;
@@ -17,9 +18,10 @@ import javax.swing.border.TitledBorder;
 
 public class CheckListGUI extends JPanel {
 
-	ArrayList<Animal> animals = new ArrayList<Animal>();
+	private ArrayList<Animal> animals = new ArrayList<Animal>();
 
-	public CheckListGUI(ArrayList<Animal> animals){
+
+	public CheckListGUI( ArrayList<Animal> animals ){
 		this.animals = animals;
 		setLayout(new GridLayout(1,0));
 		makeLayout();
@@ -27,8 +29,28 @@ public class CheckListGUI extends JPanel {
 
 	public void makeLayout(){
 		setLayout(new GridLayout(1,0));
-		JPanel listOfAnimals = animals();
-		add(listOfAnimals);
+		
+		JPanel panel = new JPanel();
+		panel.setLayout(new GridLayout(8,1));
+		panel.setBorder(new TitledBorder(new EtchedBorder(), ""));
+
+		Font font = new Font("Comic Sans MS", Font.PLAIN, 25);
+		
+		JLabel field = new JLabel("Animals to Find:");
+		field.setFont(font);
+
+		field.setPreferredSize( new Dimension(200,100) );
+		
+		field.setHorizontalAlignment(JLabel.CENTER);
+	    field.setVerticalAlignment(JLabel.CENTER);
+		
+		panel.add(field);
+
+		for (Animal a : animals){
+			panel.add( animal( a ) );
+		}
+		
+		add(panel);
 	}
 
 	private JPanel animals(){
