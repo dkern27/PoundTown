@@ -61,8 +61,6 @@ public class CheckListGUI extends JPanel {
 		Font font = new Font("Comic Sans MS", Font.PLAIN, 25);
 		JLabel field = new JLabel("Animals to Find:");
 		field.setFont(font);
-
-		field.setPreferredSize( new Dimension(200,100) );
 		
 		field.setHorizontalAlignment(JLabel.CENTER);
 	    field.setVerticalAlignment(JLabel.CENTER);
@@ -80,7 +78,7 @@ public class CheckListGUI extends JPanel {
 		
 		JLabel number = new JLabel( Integer.toString(animal.getDecimalValue()) );
 		
-		Font font = new Font("Comic Sans MS", Font.PLAIN, 50);
+		Font font = new Font("Comic Sans MS", Font.PLAIN, 38);
 		
 		if( animal.getFound() ) {
 			Map attributes = font.getAttributes();
