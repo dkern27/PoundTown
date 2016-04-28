@@ -26,7 +26,7 @@ public class CheckListGUI extends JPanel {
 	}
 
 	public void makeLayout(){
-		setLayout(new GridLayout(2,0));
+		setLayout(new GridLayout(1,0));
 		JPanel listOfAnimals = animals();
 		add(listOfAnimals);
 	}
