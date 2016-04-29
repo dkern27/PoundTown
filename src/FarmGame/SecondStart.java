@@ -26,13 +26,11 @@ public class SecondStart extends JDialog{
 		JPanel main = new JPanel();
 		JPanel button = new JPanel();
 		
-//		JLabel message = new JLabel("Welcome to #Town! This is a great place, where nothing exciting ever happens. All your farm animals will be very happy here! They'll like.....", JLabel.CENTER);
-//		main.add(message);
 		
 		Font font = new Font("Comic Sans MS", Font.PLAIN, 20);
 		
 		JTextArea message = new JTextArea("OH GOD A TORNADO JUST HIT AND TOOK YOUR ANIMALS!! You must explore the island and find them. "
-				+ "Luckily, you kept a list of all your animals. Find an animal by matching the Decimal value in your checklist to the Binary value on each animal.");
+				+ "Luckily, you kept a list of all your animals. Find an animal by matching the decimal value in your checklist to the binary value on each animal.");
 		message.setBackground(Color.CYAN);
 		message.setFont(font);
 		message.setSize(new Dimension(450,150));
