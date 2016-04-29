@@ -32,6 +32,7 @@ public class SecondStart extends JDialog{
 		JTextArea message = new JTextArea("OH GOD A TORNADO JUST HIT AND TOOK YOUR ANIMALS!! You must explore the island and find them. "
 				+ "Luckily, you kept a list of all your animals. Find an animal by matching the decimal value in your checklist to the binary value on each animal.");
 		message.setBackground(Color.CYAN);
+		message.setEditable(false);
 		message.setFont(font);
 		message.setSize(new Dimension(450,150));
 		message.setLineWrap(true);

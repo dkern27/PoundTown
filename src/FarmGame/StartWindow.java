@@ -33,6 +33,7 @@ public class StartWindow extends JDialog{
 		
 		JTextArea message = new JTextArea("Welcome to #Town! This is a great place, where nothing exciting ever happens. Except lots of tornadoes.");
 		message.setBackground(Color.CYAN);
+		message.setEditable(false);
 		message.setFont(font);
 		message.setSize(new Dimension(450,120));
 		message.setLineWrap(true);
