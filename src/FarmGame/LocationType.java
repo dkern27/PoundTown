@@ -1,10 +1,12 @@
 package FarmGame;
 
 public enum LocationType {
-	POND("/BackgroundImages/Lake.jpg"), // These all need files 
+
+	POND("/BackgroundImages/Lake.jpg"),
 	FOREST("/BackgroundImages/Forest.jpg"), 
 	FIELD("/BackgroundImages/Pasture.jpg"), 
-	VOLCANO("/BackgroundImages/Volcano.jpg");
+	VOLCANO("/BackgroundImages/Volcano.jpg"),
+	TOWN("/BackgroundImages/PoundTown.jpg");
 	
 	private final String fileName;
 	
