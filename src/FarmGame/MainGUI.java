@@ -18,6 +18,10 @@ public class MainGUI extends JFrame {
 		LevelGUI levelMap = theGame.getLevels().get(theGame.getCurrentLevel()).draw();
 		add(levelMap, BorderLayout.CENTER);
 		
+		//To look at a location specifically
+//		LocationGUI locationMap = theGame.getLevels().get(1).getLocations().get(0).draw();
+//		add(locationMap,BorderLayout.CENTER);
+		
 		//Build sidebar
 		JPanel sidebar = new JPanel();
 		sidebar.setLayout(new BoxLayout( sidebar, BoxLayout.PAGE_AXIS ));

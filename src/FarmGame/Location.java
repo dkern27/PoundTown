@@ -38,9 +38,8 @@ public class Location {
 	
 	
 	
-	public LocationGUI draw(Graphics g){
-		LocationGUI gui = new LocationGUI(backgroundFile, animals, g);
-		//Draw animals
+	public LocationGUI draw(){
+		LocationGUI gui = new LocationGUI(backgroundFile, animals);
 		return gui;
 	}
 	

@@ -1,10 +1,10 @@
 package FarmGame;
 
 public enum AnimalType {
-	CHICKEN("/Animalmages/Chicken.png"),
-	PIG("/Animalmages/Pig.png"),
-	COW("/Animalmages/Cow.png"),
-	SHEEP("/Animalmages/Sheep.png");
+	CHICKEN("/AnimalImages/Chicken.png"),
+	PIG("/AnimalImages/Pig.png"),
+	COW("/AnimalImages/Cow.png"),
+	SHEEP("/AnimalImages/Sheep.png");
 	
 	private final String fileName;
 	
