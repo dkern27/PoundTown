@@ -16,8 +16,9 @@ public class GameEngine {
 		levels.add(0, null);
 		//These should have maps instead of level images... but until then, this will do
 		levels.add(1, new Level( "Chicken", "BackgroundImages/ChickenMap.jpg", 4, AnimalType.CHICKEN, "AnimalImages/Chicken.png"));
-		levels.add(2, new Level( "Pig", "BackgroundImages/PigMap.jpg", 5, AnimalType.PIG, "AnimalImages/Pig.png"));
-		levels.add(3, new Level( "Cow", "BackgroundImages/CowMap.jpg", 5, AnimalType.COW, "AnimalImages/Pig.png"));
+		levels.add(2, new Level( "Sheep", "BackgroundImages/SheepMap.jpg", 5, AnimalType.SHEEP, "AnimalImages/Sheep.png"));
+		levels.add(2, new Level( "Pig", "BackgroundImages/PigMap.jpg", 6, AnimalType.PIG, "AnimalImages/Pig.png"));
+		levels.add(3, new Level( "Cow", "BackgroundImages/CowMap.jpg", 7, AnimalType.COW, "AnimalImages/Cow.png"));
 		
 	}
 	

@@ -1,5 +1,5 @@
 package FarmGame;
 
 public enum AnimalType {
-	CHICKEN, PIG, COW;
+	CHICKEN, PIG, COW, SHEEP;
 }
