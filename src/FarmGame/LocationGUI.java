@@ -21,7 +21,7 @@ public class LocationGUI extends JPanel{
 		this.animals = animals;
 		BufferedImage backgroundImage = null;
 		try {
-			backgroundImage = ImageIO.read( new File(fileName) );
+			backgroundImage = ImageIO.read( getClass().getResource(fileName) );
 		} catch (IOException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();

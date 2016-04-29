@@ -15,8 +15,8 @@ public class GameEngine {
 		levels = new ArrayList<Level>();
 		levels.add(0, null);
 		//These should have maps instead of level images... but until then, this will do
-		levels.add(1, new Level( "Lava", "BackgroundImages/Volcano.jpg", 4, AnimalType.CHICKEN, "AnimalImages/Chicken.png"));
-		levels.add(1, new Level( "Forest", "BackgroundImages/Forest.jpg", 5, AnimalType.PIG, "AnimalImages/Pig.png"));
+		levels.add(1, new Level( "Lava", "/BackgroundImages/Volcano.jpg", 4, AnimalType.CHICKEN));
+		levels.add(1, new Level( "Forest", "/BackgroundImages/Forest.jpg", 5, AnimalType.PIG));
 		
 	}
 	
@@ -47,8 +47,6 @@ public class GameEngine {
 		//Start the gui
 		MainGUI theGUI = new MainGUI( theGame );
 		theGUI.setVisible(true);
-		
-		
 	}
 	
 	

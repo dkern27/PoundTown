@@ -19,10 +19,10 @@ public class Animal {
 	private boolean found = false;
 	private String drawFile;
 	
-	public Animal(AnimalType animalType, String drawFile, int decimalValue, int digits) {
+	public Animal(AnimalType animalType, int decimalValue, int digits) {
 		
 		this.animalType = animalType;
-		this.drawFile = drawFile;
+		this.drawFile = animalType.getFileName();
 		this.digits = digits;
 		this.decimalValue = decimalValue;
 		binaryValue = convertToBinary(decimalValue);
@@ -40,7 +40,7 @@ public class Animal {
 	public void draw(Graphics g, int x, int y){
 		BufferedImage animalImage = null;
 		try {
-			animalImage = ImageIO.read( new File(drawFile) );
+			animalImage = ImageIO.read( getClass().getResource(drawFile) );
 		} catch (IOException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();

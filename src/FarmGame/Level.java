@@ -12,15 +12,13 @@ public class Level {
 	private int numDigits;
 	private ArrayList<Animal> animals = new ArrayList();
 	private AnimalType animalType;
-	private String animalDrawFile; //For animal
 	
 	
-	public Level( String name, String backgroundFile, int numDigits, AnimalType animalType, String animalDrawFile ) {
+	public Level( String name, String backgroundFile, int numDigits, AnimalType animalType) {
 		this.name = name;
 		this.backgroundFile = backgroundFile;
 		this.numDigits = numDigits;
 		this.animalType = animalType;
-		this.animalDrawFile = animalDrawFile;
 		
 		//Initialize animals
 		generateAnimals();
@@ -46,7 +44,7 @@ public class Level {
 		
 		//Make an array of all the possible animals
 		for( int i=0; i <= maxNum; i++ ) {
-			animals.add( new Animal( animalType, animalDrawFile, i, numDigits ));
+			animals.add( new Animal( animalType, i, numDigits ));
 		}	
 	}
 	

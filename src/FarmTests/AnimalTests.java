@@ -16,7 +16,7 @@ public class AnimalTests {
 	
 	@Before
 	public void setUp(){
-		level = new Level("2",  "AnimalImages/Sheep.png", 3, AnimalType.PIG,"AnimalImages/Pig.png");
+		level = new Level("2",  "/AnimalImages/Sheep.png", 3, AnimalType.PIG);
 		animals = level.getAnimalsList();
 	}
 	
@@ -52,7 +52,7 @@ public class AnimalTests {
 		int num7 = 0;
 		for(int i=0; i<10;i++){
 			//String name, String backgroundFile, int numDigits, AnimalType animalType, String animalDrawFile 
-			Level l = new Level("1",  "AnimalImages/Sheep.png", 3, AnimalType.PIG, "AnimalImages/Pig.png");
+			Level l = new Level("1",  "/AnimalImages/Sheep.png", 3, AnimalType.PIG);
 			for(Animal a: l.getLocations().get(0).getAnimals()){
 				switch(a.getDecimalValue()){
 				case 0: 
