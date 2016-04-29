@@ -76,7 +76,7 @@ public class CheckListGUI extends JPanel {
 	
 	private JLabel animal( Animal animal ) {
 		
-		JLabel number = new JLabel( Integer.toString(animal.getDecimalValue()) );
+		JLabel number = new JLabel( "# " + Integer.toString(animal.getDecimalValue()) );
 		
 		Font font = new Font("Comic Sans MS", Font.PLAIN, 38);
 		
