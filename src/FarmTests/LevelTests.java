@@ -25,24 +25,9 @@ public class LevelTests {
 		//We will probably need to modify the BeforeClass once we start to write the methods
 		@Before
 		public void setUp() {
-//			level = new Level("2",  "AnimalImages/Sheep.png", 4, AnimalType.PIG,"AnimalImages/Pig.png");
 			gEngine = new GameEngine();
-			//System.out.println(level.getAnimalsList().size());
-			location = new Location("1", LocationType.POND, gEngine.getLevels().get(1).getChecklist().getChecklist(), gEngine.getLevels().get(1).getAnimalsList());
-			
-			
+			location = new Location("1", LocationType.POND, gEngine.getLevels().get(1).getChecklist().getChecklist(), gEngine.getLevels().get(1).getAnimalsList());	
 		}
-	
-		
-//		@Test
-//		public void levelOrderTest() {
-//			assertEquals(gEngine.getCurrentLevel(),1);
-//			gEngine.nextLevel();
-//			assertEquals(gEngine.getCurrentLevel(),2);
-//			gEngine.nextLevel();
-//			assertEquals(gEngine.getCurrentLevel(),3);
-//			//Tests if levels are increased in a sequential order
-//		}
 		
 		@Test
 		public void levelUpWhenFoundAll() {
@@ -88,21 +73,18 @@ public class LevelTests {
 
 		}
 		
-//		@Test
-//		public void animalLocation() {
-//			assertEquals(location.getAnimals().size(),4);
-//			//Tests that there are 4 animals per location
-//			int animalCounter = 0;
-//			for (Location l : gEngine.getLevels().get(1).getLocations()) {
-//				animalCounter += l.getAnimals().size();
-//			}
-//			assertEquals(animalCounter,16);
-//			//This goes through every location in levels and adds the amount of animals in each location
-//			//(I am assuming 4 locations) and tests to see if there is the correct amount of animals in the level
-//		}
-//		
-//		public void locationCorrectAnswer() {
-//			
-//		}
+		@Test
+		public void animalLocation() {
+			
+			assertEquals(location.getAnimals().size(), 6);
+			//Tests that there are 4 animals per location
+			int animalCounter = 0;
+			for (Location l : gEngine.getLevels().get(1).getLocations()) {
+				animalCounter += l.getAnimals().size();
+			}
+			assertEquals(30,animalCounter);
+			//This goes through every location in levels and adds the amount of animals in each location
+			//(I am assuming 4 locations) and tests to see if there is the correct amount of animals in the level
+		}
 
 }
