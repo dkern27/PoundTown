@@ -18,6 +18,7 @@ public class MainGUI extends JFrame {
 		//Open new window
 		setSize(1020, 535);
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		setResizable(false);
 
 		//Add the level map picture	
 		levelMap = theGame.getLevels().get(theGame.getCurrentLevel()).draw(this);
