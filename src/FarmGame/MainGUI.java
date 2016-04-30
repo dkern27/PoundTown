@@ -16,7 +16,7 @@ public class MainGUI extends JFrame {
 
 		this.theGame = theGame;
 		//Open new window
-		setSize(1020, 540);
+		setSize(1020, 535);
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 
 		//Add the level map picture	
