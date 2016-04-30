@@ -79,7 +79,7 @@ public class LevelTests {
 			assertEquals(location.getAnimals().size(), 6);
 			//Tests that there are 4 animals per location
 			int animalCounter = 0;
-			for (Location l : gEngine.getLevels().get(1).getLocations()) {
+			for (Location l : gEngine.getLevels().get(1).getLocations().values()) {
 				animalCounter += l.getAnimals().size();
 			}
 			assertEquals(30,animalCounter);

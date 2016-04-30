@@ -19,7 +19,7 @@ public class MainGUI extends JFrame {
 		add(levelMap, BorderLayout.CENTER);
 
 		//To look at a location specifically
-//		LocationGUI locationMap = theGame.getLevels().get(1).getLocations().get(0).draw();
+//		LocationGUI locationMap = theGame.getLevels().get(1).getLocations().get(LocationType.FOREST).draw();
 //		add(locationMap,BorderLayout.CENTER);
 		
 		//Build sidebar
