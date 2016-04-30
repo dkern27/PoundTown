@@ -15,25 +15,41 @@ import javax.swing.*;
 public class LevelGUI extends JPanel implements MouseListener {
 	
 	Map <LocationType,Location> locations;
+	String fileName;
+	BufferedImage backgroundImage;
 	
 	public LevelGUI( String fileName, Map <LocationType, Location> l ) {
 		
 		locations = l;
 		
-		BufferedImage backgroundImage = null;
+		this.fileName=fileName;
+		
+//		BufferedImage backgroundImage = null;
 		try {
-			backgroundImage = ImageIO.read( getClass().getResource(fileName) );
+			backgroundImage = ImageIO.read( getClass().getResource("/BackgroundImages/GeneralMap.jpg") );
 		} catch (IOException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
-		JLabel picLabel = new JLabel(new ImageIcon( backgroundImage ));
-		add(picLabel);
 		
 		addMouseListener(this);
 		
 	}
 
+	@Override
+	public void paintComponent(Graphics g){
+		super.paintComponent(g);
+		g.drawImage(backgroundImage, 0, 0, null);
+		BufferedImage toFind = null;
+		try {
+			toFind = ImageIO.read( getClass().getResource(fileName) );
+		} catch (IOException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		g.drawImage(toFind,0,0,null);
+	}
+	
 	@Override
 	public void mouseClicked(MouseEvent e) {
 		MainGUI.locationToDraw = null;

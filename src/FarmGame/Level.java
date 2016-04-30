@@ -12,16 +12,16 @@ import java.util.Random;
 public class Level {
 	
 	private String name;
-	private String backgroundFile;
+	private String lookForFile;
 	private Map<LocationType,Location> locations = new HashMap();
 	private CheckList checklist;
 	private int numDigits;
 	private ArrayList<Animal> animals = new ArrayList();
 	private AnimalType animalType;
 	
-	public Level( String name, String backgroundFile, int numDigits, AnimalType animalType) {
+	public Level( String name, String lookForFile, int numDigits, AnimalType animalType) {
 		this.name = name;
-		this.backgroundFile = backgroundFile;
+		this.lookForFile = lookForFile;
 		this.numDigits = numDigits;
 		this.animalType = animalType;
 		
@@ -40,7 +40,7 @@ public class Level {
 
 	
 	public LevelGUI draw() {
-		LevelGUI gui = new LevelGUI( backgroundFile, locations);
+		LevelGUI gui = new LevelGUI( lookForFile, locations);
 		return gui;
 	}
 	

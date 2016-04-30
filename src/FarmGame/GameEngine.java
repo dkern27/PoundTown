@@ -17,10 +17,10 @@ public class GameEngine {
 		levels = new ArrayList<Level>();
 		levels.add(0, null);
 		//These should have maps instead of level images... but until then, this will do
-		levels.add(1, new Level( "Chicken", "/BackgroundImages/ChickenMap.jpg", 4, AnimalType.CHICKEN));
-		levels.add(2, new Level( "Sheep", "/BackgroundImages/SheepMap.jpg", 5, AnimalType.SHEEP));
-		levels.add(3, new Level( "Pig", "/BackgroundImages/PigMap.jpg", 6, AnimalType.PIG));
-		levels.add(4, new Level( "Cow", "/BackgroundImages/CowMap.jpg", 7, AnimalType.COW));
+		levels.add(1, new Level( "Chicken", "/BackgroundImages/FindHens.jpg", 4, AnimalType.CHICKEN));
+		levels.add(2, new Level( "Sheep", "/BackgroundImages/FindSheep.jpg", 5, AnimalType.SHEEP));
+		levels.add(3, new Level( "Pig", "/BackgroundImages/FindPigs.jpg", 6, AnimalType.PIG));
+		levels.add(4, new Level( "Cow", "/BackgroundImages/FindCows.jpg", 7, AnimalType.COW));
 		
 		generateClickBoxes();
 		

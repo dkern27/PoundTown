@@ -21,7 +21,11 @@ public class MainGUI extends JFrame {
 		add(levelMap, BorderLayout.CENTER);
 		System.out.println("Added level map : " + locationToDraw);
 		
+//		LocationGUI locationTest = theGame.getLevels().get(theGame.getCurrentLevel()).getLocations().get(LocationType.VOLCANO).draw();
+//		add(locationTest,BorderLayout.CENTER);
+		
 		//To look at a location specifically
+		//This should draw the location that LevelGUI mouse listener wants it to
 		if (locationToDraw != null){
 			System.out.println(locationToDraw);
 			LocationGUI locationMap = theGame.getLevels().get(theGame.getCurrentLevel()).getLocations().get(locationToDraw).draw();
