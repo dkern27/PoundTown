@@ -68,6 +68,8 @@ public class GameEngine {
 		StartWindow start = new StartWindow();
 		start.setVisible(true);
 		
+		
+		
 	}
 	
 	

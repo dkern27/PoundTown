@@ -41,9 +41,9 @@ public class Location {
 		return type;
 	}
 	
+	
 	public LocationGUI draw(){
 		LocationGUI gui = new LocationGUI(backgroundFile, animals);
-		//Draw animals
 		return gui;
 	}
 	
