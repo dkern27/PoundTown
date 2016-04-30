@@ -12,6 +12,7 @@ public class Location {
 	private ArrayList<Animal> animals = new ArrayList<Animal>();
 	private Animal correctAnimal;
 	private String backgroundFile;
+	private LocationType type;
 	
 	
 	
@@ -36,16 +37,22 @@ public class Location {
 		}
 	}
 	
+	public LocationType getLocationType(){
+		return type;
+	}
 	
-	
-	public LocationGUI draw(Graphics g){
-		LocationGUI gui = new LocationGUI(backgroundFile, animals, g);
+	public LocationGUI draw(){
+		LocationGUI gui = new LocationGUI(backgroundFile, animals);
 		//Draw animals
 		return gui;
 	}
 	
 	public ArrayList<Animal> getAnimals() {
 		return animals;
+	}
+	
+	public String getName(){
+		return name;
 	}
 
 }

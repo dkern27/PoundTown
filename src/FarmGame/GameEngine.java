@@ -7,6 +7,8 @@ public class GameEngine {
 	private ArrayList<Level> levels;
 	private int currentLevel;
 	private final int maxLevel = 3;
+	public static ArrayList<MapClickBox> clickBoxes = new ArrayList<MapClickBox>();
+
 	
 	public GameEngine() {
 		currentLevel = 1;
@@ -20,6 +22,8 @@ public class GameEngine {
 		levels.add(3, new Level( "Pig", "/BackgroundImages/PigMap.jpg", 6, AnimalType.PIG));
 		levels.add(4, new Level( "Cow", "/BackgroundImages/CowMap.jpg", 7, AnimalType.COW));
 		
+		generateClickBoxes();
+		
 	}
 	
 	public void nextLevel() {
@@ -30,6 +34,14 @@ public class GameEngine {
 		else {
 			//Do nothing
 		}	
+	}
+	
+	private void generateClickBoxes() {
+		clickBoxes.add(new MapClickBox(110,200,150,150,LocationType.FOREST));
+		clickBoxes.add(new MapClickBox(110,150,350,40,LocationType.VOLCANO));
+		clickBoxes.add(new MapClickBox(75,160,420,200,LocationType.POND));
+		clickBoxes.add(new MapClickBox(60,210,320,320,LocationType.FIELD));
+		clickBoxes.add(new MapClickBox(115,110,600,260,LocationType.TOWN));
 	}
 	
 	

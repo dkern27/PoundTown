@@ -1,18 +1,23 @@
 package FarmGame;
 
+import java.awt.BorderLayout;
+import java.awt.Graphics;
+import java.awt.event.MouseEvent;
+import java.awt.event.MouseListener;
 import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.Map;
 import java.util.Random;
 
 public class Level {
 	
 	private String name;
 	private String backgroundFile;
-	private ArrayList<Location> locations = new ArrayList();
+	private Map<LocationType,Location> locations = new HashMap();
 	private CheckList checklist;
 	private int numDigits;
 	private ArrayList<Animal> animals = new ArrayList();
 	private AnimalType animalType;
-	
 	
 	public Level( String name, String backgroundFile, int numDigits, AnimalType animalType) {
 		this.name = name;
@@ -23,6 +28,7 @@ public class Level {
 		//Initialize animals
 		generateAnimals();
 		
+		
 		//Create the checklist
 		checklist = new CheckList(animals);
 		
@@ -32,10 +38,12 @@ public class Level {
 	}
 	
 
+	
 	public LevelGUI draw() {
-		LevelGUI gui = new LevelGUI( backgroundFile );
+		LevelGUI gui = new LevelGUI( backgroundFile, locations);
 		return gui;
 	}
+	
 
 	public void generateAnimals() {
 		
@@ -49,12 +57,13 @@ public class Level {
 	}
 	
 	public void generateLocations() {
-		locations.add( new Location( "Pond", LocationType.POND, checklist.getChecklist(), animals) );
-		locations.add( new Location( "The Feral Forest", LocationType.FOREST, checklist.getChecklist(), animals) );
-		locations.add( new Location( "Green Pastures", LocationType.FIELD, checklist.getChecklist(), animals) );
-		locations.add( new Location( "FIRE!", LocationType.VOLCANO, checklist.getChecklist(), animals) );
-		locations.add( new Location( "Pound Town", LocationType.TOWN, checklist.getChecklist(), animals) );
+		locations.put( LocationType.POND, new Location( "Pond", LocationType.POND, checklist.getChecklist(), animals) );
+		locations.put( LocationType.FOREST, new Location( "The Feral Forest", LocationType.FOREST, checklist.getChecklist(), animals) );
+		locations.put( LocationType.FIELD, new Location( "Green Pastures", LocationType.FIELD, checklist.getChecklist(), animals) );
+		locations.put( LocationType.VOLCANO, new Location( "FIRE!", LocationType.VOLCANO, checklist.getChecklist(), animals) );
+		locations.put( LocationType.TOWN, new Location( "Pound Town", LocationType.TOWN, checklist.getChecklist(), animals) );
 	}
+	
 	
 	public boolean levelComplete() {
 		return checklist.foundAll();
@@ -62,7 +71,7 @@ public class Level {
 
 ////// Getters and Setters //////
 	
-	public ArrayList<Location> getLocations() {
+	public Map<LocationType,Location> getLocations() {
 		return locations;
 	}
 	

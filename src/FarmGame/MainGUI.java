@@ -17,7 +17,7 @@ public class MainGUI extends JFrame {
 		//Add the level map picture	
 		LevelGUI levelMap = theGame.getLevels().get(theGame.getCurrentLevel()).draw();
 		add(levelMap, BorderLayout.CENTER);
-		
+			
 		//Build sidebar
 		JPanel sidebar = new JPanel();
 		sidebar.setLayout(new BoxLayout( sidebar, BoxLayout.PAGE_AXIS ));

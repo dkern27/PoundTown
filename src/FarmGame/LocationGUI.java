@@ -17,7 +17,7 @@ public class LocationGUI extends JPanel{
 	private ArrayList<Animal> animals;
 	private ArrayList<Point> animalLocations; 
 	
-	public LocationGUI(String fileName, ArrayList<Animal> animals, Graphics g) {
+	public LocationGUI(String fileName, ArrayList<Animal> animals) {
 		this.animals = animals;
 		BufferedImage backgroundImage = null;
 		try {
