@@ -62,11 +62,6 @@ public class GameEngine {
 		//Start the gui
 		MainGUI theGUI = new MainGUI( theGame );
 		theGUI.setVisible(true);
-
-		
-		//Start Windows
-		StartWindow start = new StartWindow();
-		start.setVisible(true);
 		
 		
 		
