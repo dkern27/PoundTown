@@ -16,7 +16,7 @@ public class MainGUI extends JFrame {
 
 		this.theGame = theGame;
 		//Open new window
-		setSize(1020, 535);
+		setSize(1000, 500);
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		setResizable(false);
 
