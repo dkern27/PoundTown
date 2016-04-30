@@ -8,6 +8,8 @@ import javax.swing.border.TitledBorder;
 
 public class MainGUI extends JFrame {
 
+	public static LocationType locationToDraw;
+	
 	public MainGUI( GameEngine theGame ) {
 
 		//Open new window
@@ -17,10 +19,15 @@ public class MainGUI extends JFrame {
 		//Add the level map picture	
 		LevelGUI levelMap = theGame.getLevels().get(theGame.getCurrentLevel()).draw();
 		add(levelMap, BorderLayout.CENTER);
-
+		System.out.println("Added level map : " + locationToDraw);
+		
 		//To look at a location specifically
-//		LocationGUI locationMap = theGame.getLevels().get(1).getLocations().get(LocationType.FOREST).draw();
-//		add(locationMap,BorderLayout.CENTER);
+		if (locationToDraw != null){
+			System.out.println(locationToDraw);
+			LocationGUI locationMap = theGame.getLevels().get(theGame.getCurrentLevel()).getLocations().get(locationToDraw).draw();
+			add(locationMap,BorderLayout.CENTER);
+		}
+		System.out.println("Past if");
 		
 		//Build sidebar
 		JPanel sidebar = new JPanel();

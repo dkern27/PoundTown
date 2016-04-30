@@ -36,11 +36,13 @@ public class LevelGUI extends JPanel implements MouseListener {
 
 	@Override
 	public void mouseClicked(MouseEvent e) {
+		MainGUI.locationToDraw = null;
 		for (MapClickBox c : GameEngine.clickBoxes){
 			if(c.contains(e.getX(), e.getY())){
 				{ 
-				locations.get(c.getLocationType()).draw();
+				MainGUI.locationToDraw = c.getLocationType(); //This tells the MainGUI which location to draw
 				System.out.println(c.getLocationType());
+				repaint(); //This repaints LevelGUI... but I don't know how to repaint MainGUI from here
 				}
 			}
 		}
