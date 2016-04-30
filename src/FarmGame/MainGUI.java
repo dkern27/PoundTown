@@ -16,13 +16,14 @@ public class MainGUI extends JFrame {
 	public MainGUI( GameEngine theGame ) {
 
 		this.theGame = theGame;
+		
 		//Open new window
 		setSize(1000, 520);
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		setResizable(false);
 		
+		//Start with the opening scene
 		opener();
-		//startGame();
 	}
 	
 	public void opener() {
@@ -30,8 +31,10 @@ public class MainGUI extends JFrame {
 		add(opener);
 	}
 	
-	public void startGame() {
-		remove(opener);
+	public void startLevel() {
+		
+		//Clear the window
+		getContentPane().removeAll();
 		
 		//Add the level map picture	
 		levelMap = theGame.getLevels().get(theGame.getCurrentLevel()).draw(this);
@@ -45,7 +48,6 @@ public class MainGUI extends JFrame {
 		JPanel sidebar = new JPanel();
 		sidebar.setLayout(new BoxLayout( sidebar, BoxLayout.PAGE_AXIS ));
 
-
 		//Add level identifier to sidebar
 		JPanel level = new JPanel();
 		level.setBorder(new TitledBorder(new EtchedBorder(), ""));
@@ -56,7 +58,7 @@ public class MainGUI extends JFrame {
 		levelText.setVerticalAlignment(JLabel.CENTER);
 		level.add(levelText);
 		sidebar.add(level);
-
+		
 		//Add the checklist to the sidebar
 		CheckListGUI checklist = theGame.getLevels().get(theGame.getCurrentLevel()).getChecklist().draw();
 		sidebar.add(checklist);

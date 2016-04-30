@@ -58,12 +58,9 @@ public class GameEngine {
 		//Create the game, initializes in the constructor
 		GameEngine theGame = new GameEngine();
 		
-		
 		//Start the gui
 		MainGUI theGUI = new MainGUI( theGame );
 		theGUI.setVisible(true);
-		
-		
 		
 	}
 	

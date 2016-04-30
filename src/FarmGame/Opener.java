@@ -53,7 +53,7 @@ public class Opener extends JPanel implements MouseListener {
 		
 		if( currentImage == files.length) {
 			removeMouseListener(this);
-			maingui.startGame();
+			maingui.startLevel();
 			return;
 		}
 		
