@@ -11,7 +11,7 @@ public class MainGUI extends JFrame {
 	GameEngine theGame;
 	public LocationType locationToDraw;
 	LevelGUI levelMap;
-	StartGUI opener;
+	Opener opener;
 	
 	public MainGUI( GameEngine theGame ) {
 
@@ -26,7 +26,7 @@ public class MainGUI extends JFrame {
 	}
 	
 	public void opener() {
-		opener = new StartGUI(this);
+		opener = new Opener(this);
 		add(opener);
 	}
 	
@@ -68,7 +68,7 @@ public class MainGUI extends JFrame {
 		this.repaint();
 		
 		//Start Dialog
-		StartWindow start = new StartWindow();
+		StartDialog start = new StartDialog();
 		start.setVisible(true);
 	}
 	

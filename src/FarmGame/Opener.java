@@ -16,14 +16,14 @@ import javax.swing.JFrame;
 import javax.swing.JLabel;
 import javax.swing.JPanel;
 
-public class StartGUI extends JPanel implements MouseListener {
+public class Opener extends JPanel implements MouseListener {
 
 	private static final String[] files = {"/OpenerImages/StormyFarm.png","/OpenerImages/RadioWarning.png","/OpenerImages/Tornado.png"};
 	private int currentImage = 0;
 	private BufferedImage backgroundImage;
 	private MainGUI maingui;
 
-	public StartGUI( MainGUI maingui ) {
+	public Opener( MainGUI maingui ) {
 
 		this.maingui = maingui;
 		
