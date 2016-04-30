@@ -7,31 +7,25 @@ import javax.swing.border.EtchedBorder;
 import javax.swing.border.TitledBorder;
 
 public class MainGUI extends JFrame {
-
-	public static LocationType locationToDraw;
+	
+	GameEngine theGame;
+	public LocationType locationToDraw;
+	LevelGUI levelMap;
 	
 	public MainGUI( GameEngine theGame ) {
 
+		this.theGame = theGame;
 		//Open new window
 		setSize(1020, 540);
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 
 		//Add the level map picture	
-		LevelGUI levelMap = theGame.getLevels().get(theGame.getCurrentLevel()).draw();
+		levelMap = theGame.getLevels().get(theGame.getCurrentLevel()).draw(this);
 		add(levelMap, BorderLayout.CENTER);
 		System.out.println("Added level map : " + locationToDraw);
 		
 //		LocationGUI locationTest = theGame.getLevels().get(theGame.getCurrentLevel()).getLocations().get(LocationType.VOLCANO).draw();
 //		add(locationTest,BorderLayout.CENTER);
-		
-		//To look at a location specifically
-		//This should draw the location that LevelGUI mouse listener wants it to
-		if (locationToDraw != null){
-			System.out.println(locationToDraw);
-			LocationGUI locationMap = theGame.getLevels().get(theGame.getCurrentLevel()).getLocations().get(locationToDraw).draw();
-			add(locationMap,BorderLayout.CENTER);
-		}
-		System.out.println("Past if");
 		
 		//Build sidebar
 		JPanel sidebar = new JPanel();
@@ -55,6 +49,19 @@ public class MainGUI extends JFrame {
 		
 		//Add sidebar to main gui
 		add(sidebar, BorderLayout.WEST);
+	}
+	
+	
+	public void goToLocation(LocationType newLocation){
+		locationToDraw = newLocation;
+		if (locationToDraw != null){
+			remove(levelMap);
+			System.out.println(locationToDraw);
+			LocationGUI locationMap = theGame.getLevels().get(theGame.getCurrentLevel()).getLocations().get(locationToDraw).draw();
+			add(locationMap,BorderLayout.CENTER);
+			this.validate();
+			this.repaint();
+		}
 	}
 
 }

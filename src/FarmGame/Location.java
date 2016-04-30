@@ -14,9 +14,6 @@ public class Location {
 	private String backgroundFile;
 	private LocationType type;
 	
-	
-	
-	
 	private static final int NUM_ANIMALS = 6;
 
 	public Location(String name, LocationType locationType, ArrayList<Animal> checklist, ArrayList<Animal> allPossibleAnimals) {
@@ -37,14 +34,13 @@ public class Location {
 		}
 	}
 	
-	public LocationType getLocationType(){
-		return type;
-	}
-	
-	
 	public LocationGUI draw(){
 		LocationGUI gui = new LocationGUI(backgroundFile, animals);
 		return gui;
+	}
+	
+	public LocationType getLocationType(){
+		return type;
 	}
 	
 	public ArrayList<Animal> getAnimals() {
