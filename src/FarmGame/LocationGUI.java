@@ -36,7 +36,6 @@ public class LocationGUI extends JPanel{
 		g.drawImage(backgroundImage, 0, 0, null);
 		for(int i=0; i<animals.size(); i++){
 			animals.get(i).draw(g, (int)animalLocations.get(i).getX(), (int)animalLocations.get(i).getY());
-			//System.out.println("hi");
 		}
 	}
 

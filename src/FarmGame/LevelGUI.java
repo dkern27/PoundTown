@@ -18,13 +18,16 @@ public class LevelGUI extends JPanel implements MouseListener {
 	String fileName;
 	BufferedImage backgroundImage;
 	
-	public LevelGUI( String fileName, Map <LocationType, Location> l ) {
+	MainGUI maingui;
+	
+	public LevelGUI( String fileName, Map <LocationType, Location> l, MainGUI maingui ) {
 		
 		locations = l;
+		this.maingui = maingui;
 		
 		this.fileName=fileName;
 		
-//		BufferedImage backgroundImage = null;
+		//BufferedImage backgroundImage = null;
 		try {
 			backgroundImage = ImageIO.read( getClass().getResource("/BackgroundImages/GeneralMap.jpg") );
 		} catch (IOException e) {
@@ -52,39 +55,26 @@ public class LevelGUI extends JPanel implements MouseListener {
 	
 	@Override
 	public void mouseClicked(MouseEvent e) {
-		MainGUI.locationToDraw = null;
 		for (MapClickBox c : GameEngine.clickBoxes){
 			if(c.contains(e.getX(), e.getY())){
 				{ 
-				MainGUI.locationToDraw = c.getLocationType(); //This tells the MainGUI which location to draw
-				System.out.println(c.getLocationType());
-				repaint(); //This repaints LevelGUI... but I don't know how to repaint MainGUI from here
+				maingui.goToLocation(c.getLocationType()); //This tells the MainGUI which location to draw
+				removeMouseListener(this);
 				}
 			}
 		}
 	}
 
 	@Override
-	public void mouseEntered(MouseEvent e) {
-		// TODO Auto-generated method stub
-		
-	}
+	public void mouseEntered(MouseEvent e) {}
 
 	@Override
-	public void mouseExited(MouseEvent e) {
-		// TODO Auto-generated method stub
-		
-	}
+	public void mouseExited(MouseEvent e) {}
 
 	@Override
-	public void mousePressed(MouseEvent e) {
-		// TODO Auto-generated method stub
-	}
+	public void mousePressed(MouseEvent e) {}
 
 	@Override
-	public void mouseReleased(MouseEvent e) {
-		// TODO Auto-generated method stub
-		
-	}
+	public void mouseReleased(MouseEvent e) {}
 
 }

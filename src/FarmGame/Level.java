@@ -39,8 +39,8 @@ public class Level {
 	
 
 	
-	public LevelGUI draw() {
-		LevelGUI gui = new LevelGUI( lookForFile, locations);
+	public LevelGUI draw(MainGUI maingui) {
+		LevelGUI gui = new LevelGUI( lookForFile, locations, maingui);
 		return gui;
 	}
 	
