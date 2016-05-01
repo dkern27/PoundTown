@@ -12,7 +12,7 @@ import javax.imageio.ImageIO;
 import javax.swing.ImageIcon;
 import javax.swing.JLabel;
 
-public class Animal {
+public class Animal implements Comparable<Animal>{
 
 	private AnimalType animalType;
 	private int digits;
@@ -93,5 +93,11 @@ public class Animal {
 	
 	public AnimalType getAnimalType(){
 		return animalType;
+	}
+
+	public int compareTo(Animal otherAnimal) {
+		if(this.decimalValue > otherAnimal.getDecimalValue())
+			return 1;
+		return -1;
 	}
 }

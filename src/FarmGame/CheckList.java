@@ -1,6 +1,7 @@
 package FarmGame;
 
 import java.util.ArrayList;
+import java.util.Collections;
 import java.util.Random;
 
 public class CheckList {
@@ -15,6 +16,7 @@ public class CheckList {
 			if(!animals.contains(a))
 				animals.add(a);
 		}
+		Collections.sort(animals);
 	}
 	
 	public boolean foundAll(){
