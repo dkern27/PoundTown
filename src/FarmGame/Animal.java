@@ -1,16 +1,13 @@
 package FarmGame;
 
-import java.awt.Color;
+import java.awt.Font;
 import java.awt.Graphics;
 import java.awt.Rectangle;
 import java.awt.image.BufferedImage;
-import java.io.File;
 import java.io.IOException;
 import java.util.ArrayList;
 
 import javax.imageio.ImageIO;
-import javax.swing.ImageIcon;
-import javax.swing.JLabel;
 
 public class Animal implements Comparable<Animal>{
 
@@ -32,6 +29,7 @@ public class Animal implements Comparable<Animal>{
 		
 	}
 
+	//Double checks animal is on list and sets found to true
 	public boolean found(ArrayList<Animal> checklist){
 		if(checklist.contains(this)){
 			found = true;
@@ -39,17 +37,19 @@ public class Animal implements Comparable<Animal>{
 		return found;
 	}
 	
+	//Draws the animal image
 	public void draw(Graphics g, int x, int y){
 		BufferedImage animalImage = null;
 		try {
 			animalImage = ImageIO.read( getClass().getResource(drawFile) );
 		} catch (IOException e) {
-			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
 		g.drawImage(animalImage, x, y, null);
 		rect = new Rectangle(x,y,75,95); //the area that the image takes up which you can click on
-		g.drawString(Integer.toString(decimalValue), x+30, y-10);
+		g.setFont(new Font("Comic Sans MS", Font.BOLD, 24));
+		//decimal Value for testing. Spacing is approximately good when using binary
+		g.drawString(Integer.toString(decimalValue), x-(binaryValue.length()-4)*4, y-10);
 	}
 	
 	//Helper function to convert decimal to binary
@@ -67,7 +67,13 @@ public class Animal implements Comparable<Animal>{
 			binaryDigitValue = binaryDigitValue / 2;
 		}
 		return binaryNumber;
-		
+	}
+	
+	//For sorting
+	public int compareTo(Animal otherAnimal) {
+		if(this.decimalValue > otherAnimal.getDecimalValue())
+			return 1;
+		return -1;
 	}
 	
 	//Getters
@@ -93,11 +99,5 @@ public class Animal implements Comparable<Animal>{
 	
 	public AnimalType getAnimalType(){
 		return animalType;
-	}
-
-	public int compareTo(Animal otherAnimal) {
-		if(this.decimalValue > otherAnimal.getDecimalValue())
-			return 1;
-		return -1;
 	}
 }

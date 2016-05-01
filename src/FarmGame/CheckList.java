@@ -6,7 +6,7 @@ import java.util.Random;
 
 public class CheckList {
 
-	private static ArrayList<Animal> animals = new ArrayList();
+	private static ArrayList<Animal> animals = new ArrayList<Animal>();
 	private static final int NUM_ANIMALS_TO_FIND = 6;
 	
 	public CheckList(ArrayList<Animal> allAnimals) {
