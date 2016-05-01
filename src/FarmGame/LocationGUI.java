@@ -68,18 +68,45 @@ public class LocationGUI extends JPanel implements MouseListener {
 		animalLocations.add(new Point(175, 400));
 	}
 
-	@Override
-	public void mouseClicked(MouseEvent e) {
-		if(e.getX() < 60 && e.getY() < 60 ){ // This makes the gui go back to the map if you click in the top left corner.
-			//Should also go back to the map if you click on an animal
-			
+	public void backToMap() {
 		GameEngine.currentLocation = null;
 		LevelGUI level= new LevelGUI( maingui.theGame.getCurrentLevelLEVEL().getLookForFile(),
 				maingui.theGame.getCurrentLevelLEVEL().getLocations(),
 				maingui);
 
 		maingui.displayPanel(level);
-		removeMouseListener(this);
+	}
+	
+	@Override
+	public void mouseClicked(MouseEvent e) {
+		if(e.getX() < 60 && e.getY() < 60 ){ // This makes the gui go back to the map if you click in the top left corner.
+			//Should also go back to the map if you click on an animal
+			backToMap();	
+			removeMouseListener(this);
+		}
+		if (e.getX() > 50 && e.getX() < 100 && e.getY() > 250 && e.getY() < 335) {
+			backToMap();	
+			removeMouseListener(this);
+		}
+		if (e.getX() > 50 && e.getX() < 100 && e.getY() > 400 && e.getY() < 485) {
+			backToMap();	
+			removeMouseListener(this);
+		}
+		if (e.getX() > 175 && e.getX() < 225 && e.getY() > 250 && e.getY() < 335) {
+			backToMap();	
+			removeMouseListener(this);
+		}
+		if (e.getX() > 175 && e.getX() < 225 && e.getY() > 400 && e.getY() < 485) {
+			backToMap();	
+			removeMouseListener(this);
+		}
+		if (e.getX() > 300 && e.getX() < 350 && e.getY() > 250 && e.getY() < 335) {
+			backToMap();	
+			removeMouseListener(this);
+		}
+		if (e.getX() > 300 && e.getX() < 350 && e.getY() > 400 && e.getY() < 485) {
+			backToMap();	
+			removeMouseListener(this);
 		}
 	}
 
