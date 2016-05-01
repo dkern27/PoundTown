@@ -18,6 +18,8 @@ public class MainGUI extends JFrame{
 	LocationGUI locationGUI;
 	JPanel currentPanel;
 	Opener opener;
+	CheckListGUI checklist;
+	JPanel sidebar;
 	
 	public MainGUI( GameEngine theGame ) {
 
@@ -48,7 +50,7 @@ public class MainGUI extends JFrame{
 		add(currentPanel, BorderLayout.CENTER);
 		
 		//Build sidebar
-		JPanel sidebar = new JPanel();
+		sidebar = new JPanel();
 		sidebar.setLayout(new BoxLayout( sidebar, BoxLayout.PAGE_AXIS ));
 
 		//Add level identifier to sidebar
@@ -63,7 +65,7 @@ public class MainGUI extends JFrame{
 		sidebar.add(level);
 		
 		//Add the checklist to the sidebar
-		CheckListGUI checklist = theGame.getLevels().get(theGame.getCurrentLevel()).getChecklist().draw();
+		checklist = theGame.getLevels().get(theGame.getCurrentLevel()).getChecklist().draw();
 		sidebar.add(checklist);
 
 		//Add sidebar to main gui
@@ -87,6 +89,10 @@ public class MainGUI extends JFrame{
 			this.repaint();
 	}
 	
-
+	public void updateChecklistGUI(){
+		sidebar.remove(checklist);
+		checklist = theGame.getLevels().get(theGame.getCurrentLevel()).getChecklist().draw();
+		sidebar.add(checklist);
+	}
 
 }

@@ -1,6 +1,8 @@
 package FarmGame;
 
+import java.awt.Color;
 import java.awt.Graphics;
+import java.awt.Rectangle;
 import java.awt.image.BufferedImage;
 import java.io.File;
 import java.io.IOException;
@@ -18,6 +20,7 @@ public class Animal {
 	private String binaryValue;
 	private boolean found = false;
 	private String drawFile;
+	private Rectangle rect;
 	
 	public Animal(AnimalType animalType, int decimalValue, int digits) {
 		
@@ -45,6 +48,8 @@ public class Animal {
 			e.printStackTrace();
 		}
 		g.drawImage(animalImage, x, y, null);
+		rect = new Rectangle(x,y,75,95); //the area that the image takes up which you can click on
+		g.drawString(Integer.toString(decimalValue), x+30, y-10);
 	}
 	
 	//Helper function to convert decimal to binary
@@ -80,5 +85,9 @@ public class Animal {
 	
 	public void setFound(boolean f){
 		found = f;
+	}
+
+	public Rectangle getRectangle() {
+		return rect;
 	}
 }

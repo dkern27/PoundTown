@@ -53,6 +53,7 @@ public class LocationGUI extends JPanel implements MouseListener {
 		g.drawImage(backArrow, 5, 5, null);
 		for(int i=0; i<animals.size(); i++){
 			animals.get(i).draw(g, (int)animalLocations.get(i).getX(), (int)animalLocations.get(i).getY());
+			
 		}
 	}
 
@@ -83,6 +84,8 @@ public class LocationGUI extends JPanel implements MouseListener {
 	public void checkAnimalToChecklist(Animal a) {
 		if (a.found(CheckList.getChecklist())) {
 			//If in checklist do something
+			a.setFound(true);
+			maingui.updateChecklistGUI();
 		}
 		//else punishment. Or nothing. Whichever
 	}
@@ -94,35 +97,44 @@ public class LocationGUI extends JPanel implements MouseListener {
 			backToMap();	
 			removeMouseListener(this);
 		}
-		if (e.getX() > 50 && e.getX() < 100 && e.getY() > 250 && e.getY() < 335) {
-			checkAnimalToChecklist(animals.get(0));
-			backToMap();	
-			removeMouseListener(this);
-		}
-		if (e.getX() > 50 && e.getX() < 100 && e.getY() > 400 && e.getY() < 485) {
-			checkAnimalToChecklist(animals.get(1));
-			backToMap();	
-			removeMouseListener(this);
-		}
-		if (e.getX() > 175 && e.getX() < 225 && e.getY() > 250 && e.getY() < 335) {
-			checkAnimalToChecklist(animals.get(2));
-			backToMap();	
-			removeMouseListener(this);
-		}
-		if (e.getX() > 175 && e.getX() < 225 && e.getY() > 400 && e.getY() < 485) {
-			checkAnimalToChecklist(animals.get(3));
-			backToMap();	
-			removeMouseListener(this);
-		}
-		if (e.getX() > 300 && e.getX() < 350 && e.getY() > 250 && e.getY() < 335) {
-			checkAnimalToChecklist(animals.get(4));
-			backToMap();	
-			removeMouseListener(this);
-		}
-		if (e.getX() > 300 && e.getX() < 350 && e.getY() > 400 && e.getY() < 485) {
-			checkAnimalToChecklist(animals.get(5));
-			backToMap();	
-			removeMouseListener(this);
+//		if (e.getX() > 50 && e.getX() < 100 && e.getY() > 250 && e.getY() < 335) {
+//			checkAnimalToChecklist(animals.get(0));
+//			backToMap();	
+//			removeMouseListener(this);
+//		}
+//		if (e.getX() > 50 && e.getX() < 100 && e.getY() > 400 && e.getY() < 485) {
+//			checkAnimalToChecklist(animals.get(1));
+//			backToMap();	
+//			removeMouseListener(this);
+//		}
+//		if (e.getX() > 175 && e.getX() < 225 && e.getY() > 250 && e.getY() < 335) {
+//			checkAnimalToChecklist(animals.get(2));
+//			backToMap();	
+//			removeMouseListener(this);
+//		}
+//		if (e.getX() > 175 && e.getX() < 225 && e.getY() > 400 && e.getY() < 485) {
+//			checkAnimalToChecklist(animals.get(3));
+//			backToMap();	
+//			removeMouseListener(this);
+//		}
+//		if (e.getX() > 300 && e.getX() < 350 && e.getY() > 250 && e.getY() < 335) {
+//			checkAnimalToChecklist(animals.get(4));
+//			backToMap();	
+//			removeMouseListener(this);
+//		}
+//		if (e.getX() > 300 && e.getX() < 350 && e.getY() > 400 && e.getY() < 485) {
+//			checkAnimalToChecklist(animals.get(5));
+//			backToMap();	
+//			removeMouseListener(this);
+//		}
+		
+		//just since we might want to change the location of the animals, or add more
+		for(Animal a : animals){
+			if (a.getRectangle().contains(e.getX(),e.getY())) {
+				checkAnimalToChecklist(a);
+				backToMap();	
+				removeMouseListener(this);
+			}
 		}
 	}
 
