@@ -59,7 +59,6 @@ public class LevelGUI extends JPanel implements MouseListener {
 		g.drawImage(toFind,0,0,null);
 	}
 	
-	@Override
 	public void mouseClicked(MouseEvent e) {
 		for (MapClickBox c : GameEngine.clickBoxes){
 			if(c.contains(e.getX(), e.getY())){
@@ -75,16 +74,12 @@ public class LevelGUI extends JPanel implements MouseListener {
 		}
 	}
 
-	@Override
 	public void mouseEntered(MouseEvent e) {}
 
-	@Override
 	public void mouseExited(MouseEvent e) {}
 
-	@Override
 	public void mousePressed(MouseEvent e) {}
 
-	@Override
 	public void mouseReleased(MouseEvent e) {}
 
 }

@@ -15,9 +15,9 @@ import javax.swing.JTextArea;
 
 
 
-public class StartWindow extends JDialog{
+public class StartDialog extends JDialog{
 
-	public StartWindow( ) {
+	public StartDialog( ) {
 		setTitle("Welcome to #Town!");
 		setSize(500, 190);
 		setLocation(250,200);
@@ -26,12 +26,9 @@ public class StartWindow extends JDialog{
 		JPanel main = new JPanel();
 		JPanel button = new JPanel();
 		
-//		JLabel message = new JLabel("Welcome to #Town! This is a great place, where nothing exciting ever happens. All your farm animals will be very happy here! They'll like.....", JLabel.CENTER);
-//		main.add(message);
-		
 		Font font = new Font("Comic Sans MS", Font.PLAIN, 20);
 		
-		JTextArea message = new JTextArea("Welcome to #Town! This is a great place, where nothing exciting ever happens. Except lots of tornadoes.");
+		JTextArea message = new JTextArea("Oh no! The tornado has swept away all your animals! Explore the island and find the animals on your list.");
 		message.setBackground(Color.CYAN);
 		message.setEditable(false);
 		message.setFont(font);
@@ -45,8 +42,6 @@ public class StartWindow extends JDialog{
 		nextWindow.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				CloseFrame();
-				SecondStart start = new SecondStart();
-				start.setVisible(true);
 				
 			}
 		});

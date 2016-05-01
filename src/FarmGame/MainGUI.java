@@ -17,14 +17,30 @@ public class MainGUI extends JFrame{
 	LevelGUI levelMap;
 	LocationGUI locationGUI;
 	JPanel currentPanel;
+	Opener opener;
 	
 	public MainGUI( GameEngine theGame ) {
 
 		this.theGame = theGame;
+		
 		//Open new window
-		setSize(1020, 535);
+		setSize(1000, 530);
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-
+		setResizable(false);
+		
+		//Start with the opening scene
+		opener();
+	}
+	
+	public void opener() {
+		opener = new Opener(this);
+		add(opener);
+	}
+	
+	public void startLevel() {
+		
+		//Clear the window
+		getContentPane().removeAll();
 		
 		currentPanel = new LevelGUI( theGame.getLevels().get(theGame.getCurrentLevel()).getLookForFile(),
 				theGame.getLevels().get(theGame.getCurrentLevel()).getLocations(),
@@ -34,8 +50,7 @@ public class MainGUI extends JFrame{
 		//Build sidebar
 		JPanel sidebar = new JPanel();
 		sidebar.setLayout(new BoxLayout( sidebar, BoxLayout.PAGE_AXIS ));
-		
-		
+
 		//Add level identifier to sidebar
 		JPanel level = new JPanel();
 		level.setBorder(new TitledBorder(new EtchedBorder(), ""));
@@ -43,16 +58,23 @@ public class MainGUI extends JFrame{
 		Font font = new Font("Comic Sans MS", Font.PLAIN, 45);
 		levelText.setFont(font);
 		levelText.setHorizontalAlignment(JLabel.CENTER);
-	    levelText.setVerticalAlignment(JLabel.CENTER);
-	    level.add(levelText);
-	    sidebar.add(level);
+		levelText.setVerticalAlignment(JLabel.CENTER);
+		level.add(levelText);
+		sidebar.add(level);
 		
 		//Add the checklist to the sidebar
 		CheckListGUI checklist = theGame.getLevels().get(theGame.getCurrentLevel()).getChecklist().draw();
 		sidebar.add(checklist);
-		
+
 		//Add sidebar to main gui
 		add(sidebar, BorderLayout.WEST);
+		
+		this.validate();
+		this.repaint();
+		
+		//Start Dialog
+		StartDialog start = new StartDialog();
+		start.setVisible(true);
 	}
 	
 	

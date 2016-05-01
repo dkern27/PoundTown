@@ -32,9 +32,8 @@ public class Animal {
 	public boolean found(ArrayList<Animal> checklist){
 		if(checklist.contains(this)){
 			found = true;
-			return true; //This should be true right? It was false before
 		}
-		return false;
+		return found;
 	}
 	
 	public void draw(Graphics g, int x, int y){
