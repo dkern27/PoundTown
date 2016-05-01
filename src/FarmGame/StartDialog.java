@@ -28,7 +28,7 @@ public class StartDialog extends JDialog{
 		
 		Font font = new Font("Comic Sans MS", Font.PLAIN, 20);
 		
-		JTextArea message = new JTextArea("Oh no! The tornado has swept away all your animals! Explore the island and find the animals on your list. Click on the animal with the binary number corresponding to a decimal number on your checklist to capture it.");
+		JTextArea message = new JTextArea("Oh no! The tornado has swept away all your animals! Explore the island and find the animals on your list. To capture one, click on the animal with a binary number corresponding to a decimal number on your checklist.");
 		message.setBackground(Color.CYAN);
 		message.setEditable(false);
 		message.setFont(font);
