@@ -6,7 +6,7 @@ public class GameEngine {
 
 	private ArrayList<Level> levels;
 	private int currentLevel;
-	private final int maxLevel = 3;
+	private final int maxLevel = 4;
 	public static ArrayList<MapClickBox> clickBoxes = new ArrayList<MapClickBox>();
 
 	public static LocationType currentLocation = null;
