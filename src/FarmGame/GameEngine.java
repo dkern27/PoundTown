@@ -9,6 +9,7 @@ public class GameEngine {
 	private final int maxLevel = 3;
 	public static ArrayList<MapClickBox> clickBoxes = new ArrayList<MapClickBox>();
 
+	public static LocationType currentLocation = null;
 	
 	public GameEngine() {
 		currentLevel = 1;
@@ -84,8 +85,16 @@ public class GameEngine {
 		return currentLevel;
 	}
 	
+	public Location getCurrentLocation(){
+		return levels.get(currentLevel).getLocations().get(currentLocation);
+	}
+	
 	public void setCurrentLevel(int c){
 		currentLevel=c;
+	}
+	
+	public Level getCurrentLevelLEVEL(){
+		return levels.get(currentLevel);
 	}
 	
 }

@@ -34,10 +34,10 @@ public class Location {
 		}
 	}
 	
-	public LocationGUI draw(){
-		LocationGUI gui = new LocationGUI(backgroundFile, animals);
-		return gui;
-	}
+//	public LocationGUI draw(){
+//		LocationGUI gui = new LocationGUI(backgroundFile, animals);
+//		return gui;
+//	}
 	
 	public LocationType getLocationType(){
 		return type;

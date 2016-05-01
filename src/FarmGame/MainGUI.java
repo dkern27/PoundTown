@@ -1,16 +1,22 @@
 package FarmGame;
 
 import java.awt.*;
+import java.awt.event.MouseEvent;
+import java.awt.event.MouseListener;
+import java.util.ArrayList;
+import java.util.Map;
 
 import javax.swing.*;
 import javax.swing.border.EtchedBorder;
 import javax.swing.border.TitledBorder;
 
-public class MainGUI extends JFrame {
+public class MainGUI extends JFrame{
 	
 	GameEngine theGame;
 	public LocationType locationToDraw;
 	LevelGUI levelMap;
+	LocationGUI locationGUI;
+	JPanel currentPanel;
 	
 	public MainGUI( GameEngine theGame ) {
 
@@ -19,13 +25,11 @@ public class MainGUI extends JFrame {
 		setSize(1020, 535);
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 
-		//Add the level map picture	
-		levelMap = theGame.getLevels().get(theGame.getCurrentLevel()).draw(this);
-		add(levelMap, BorderLayout.CENTER);
-		System.out.println("Added level map : " + locationToDraw);
 		
-//		LocationGUI locationTest = theGame.getLevels().get(theGame.getCurrentLevel()).getLocations().get(LocationType.VOLCANO).draw();
-//		add(locationTest,BorderLayout.CENTER);
+		currentPanel = new LevelGUI( theGame.getLevels().get(theGame.getCurrentLevel()).getLookForFile(),
+				theGame.getLevels().get(theGame.getCurrentLevel()).getLocations(),
+				this );
+		add(currentPanel, BorderLayout.CENTER);
 		
 		//Build sidebar
 		JPanel sidebar = new JPanel();
@@ -52,16 +56,15 @@ public class MainGUI extends JFrame {
 	}
 	
 	
-	public void goToLocation(LocationType newLocation){
-		locationToDraw = newLocation;
-		if (locationToDraw != null){
-			remove(levelMap);
-			System.out.println(locationToDraw);
-			LocationGUI locationMap = theGame.getLevels().get(theGame.getCurrentLevel()).getLocations().get(locationToDraw).draw();
-			add(locationMap,BorderLayout.CENTER);
+	public void displayPanel(JPanel panel){
+		
+			remove(currentPanel);
+			currentPanel=panel;
+			add(panel,BorderLayout.CENTER);
 			this.validate();
 			this.repaint();
-		}
 	}
+	
+
 
 }

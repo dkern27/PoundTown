@@ -37,7 +37,9 @@ public class Level {
 		
 	}
 	
-
+	public String getLookForFile(){
+		return lookForFile;
+	}
 	
 	public LevelGUI draw(MainGUI maingui) {
 		LevelGUI gui = new LevelGUI( lookForFile, locations, maingui);
