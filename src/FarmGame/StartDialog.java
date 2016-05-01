@@ -19,7 +19,7 @@ public class StartDialog extends JDialog{
 
 	public StartDialog( ) {
 		setTitle("Welcome to #Town!");
-		setSize(500, 190);
+		setSize(500, 240);
 		setLocation(250,200);
 		setLayout(new FlowLayout());
 		
@@ -28,7 +28,7 @@ public class StartDialog extends JDialog{
 		
 		Font font = new Font("Comic Sans MS", Font.PLAIN, 20);
 		
-		JTextArea message = new JTextArea("Oh no! The tornado has swept away all your animals! Explore the island and find the animals on your list.");
+		JTextArea message = new JTextArea("Oh no! The tornado has swept away all your animals! Explore the island and find the animals on your list. Click on the animal with the binary number corresponding to a decimal number on your checklist.");
 		message.setBackground(Color.CYAN);
 		message.setEditable(false);
 		message.setFont(font);
@@ -38,7 +38,7 @@ public class StartDialog extends JDialog{
 		main.add(message);
 		
 		
-		JButton nextWindow = new JButton("Uhhh...");
+		JButton nextWindow = new JButton("OK!");
 		nextWindow.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				CloseFrame();
