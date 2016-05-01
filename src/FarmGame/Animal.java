@@ -90,4 +90,8 @@ public class Animal {
 	public Rectangle getRectangle() {
 		return rect;
 	}
+	
+	public AnimalType getAnimalType(){
+		return animalType;
+	}
 }

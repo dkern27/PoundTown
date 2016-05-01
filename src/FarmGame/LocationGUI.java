@@ -13,6 +13,7 @@ import java.util.Map;
 import javax.imageio.ImageIO;
 import javax.swing.ImageIcon;
 import javax.swing.JLabel;
+import javax.swing.JOptionPane;
 import javax.swing.JPanel;
 
 public class LocationGUI extends JPanel implements MouseListener {
@@ -32,14 +33,12 @@ public class LocationGUI extends JPanel implements MouseListener {
 		try {
 			backgroundImage = ImageIO.read( getClass().getResource(currentLocation.getfileName() ) );
 		} catch (IOException e) {
-			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
 		
 		try {
 			backArrow = ImageIO.read( getClass().getResource("/BackgroundImages/BackArrow.png") );
 		} catch (IOException e) {
-			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
 		
@@ -59,7 +58,6 @@ public class LocationGUI extends JPanel implements MouseListener {
 
 	//Gives set locations for animals
 	public void populate(){
-		//Left 100 is sidebar
 		//And i'm just making up these points
 		animalLocations.add(new Point(50, 250));
 		animalLocations.add(new Point(50, 400));
@@ -73,21 +71,22 @@ public class LocationGUI extends JPanel implements MouseListener {
 	public void backToMap() {
 		GameEngine.currentLocation = null;
 		LevelGUI level= new LevelGUI( maingui.theGame.getCurrentLevelLEVEL().getLookForFile(),
-				maingui.theGame.getCurrentLevelLEVEL().getLocations(),
-				maingui);
+				maingui.theGame.getCurrentLevelLEVEL().getLocations(),maingui);
 
 		maingui.displayPanel(level);
 	}
 	
 	//checks to see if animal that was just clicked on is in the checklist
 	//Not sure what we want to do if it is not in the checklist. We discussed a punishment of some sort but not sure if we're still doing that
-	public void checkAnimalToChecklist(Animal a) {
+	public boolean checkAnimalToChecklist(Animal a) {
 		if (a.found(CheckList.getChecklist())) {
 			//If in checklist do something
 			a.setFound(true);
 			maingui.updateChecklistGUI();
+			return true;
 		}
 		//else punishment. Or nothing. Whichever
+		return false;
 	}
 	
 	@Override
@@ -131,9 +130,12 @@ public class LocationGUI extends JPanel implements MouseListener {
 		//just since we might want to change the location of the animals, or add more
 		for(Animal a : animals){
 			if (a.getRectangle().contains(e.getX(),e.getY())) {
-				checkAnimalToChecklist(a);
-				backToMap();	
+				if(checkAnimalToChecklist(a))
+					JOptionPane.showMessageDialog(this, "Good Job! You found one of your animals!");
+				else
+					JOptionPane.showMessageDialog(this, "Oops! That wasn't one of your animals!");
 				removeMouseListener(this);
+				backToMap();	
 			}
 		}
 	}
