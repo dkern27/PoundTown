@@ -55,7 +55,7 @@ public class Animal implements Comparable<Animal>{
 			g.setFont(new Font("Comic Sans MS", Font.BOLD, 24));
 			g.setColor(Color.WHITE);
 			//decimal Value for testing. Spacing is approximately good when using binary
-			g.drawString(Integer.toString(decimalValue), x-(binaryValue.length()-4)*4, y-10);
+			g.drawString(binaryValue, x-(binaryValue.length()-4)*5, y-10);
 		}
 		
 		

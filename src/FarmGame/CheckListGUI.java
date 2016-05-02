@@ -50,27 +50,6 @@ public class CheckListGUI extends JPanel {
 		
 		add(panel);
 	}
-
-//	private JPanel animals(){
-//		JPanel panel = new JPanel();
-//		panel.setLayout(new GridLayout(7,1));
-//		panel.setBorder(new TitledBorder(new EtchedBorder(), ""));
-//
-//		Font font = new Font("Comic Sans MS", Font.PLAIN, 25);
-//		JLabel field = new JLabel("Animals to Find:");
-//		field.setFont(font);
-//		
-//		field.setHorizontalAlignment(JLabel.CENTER);
-//	    field.setVerticalAlignment(JLabel.CENTER);
-//		
-//		panel.add(field);
-//
-//		for (Animal a : animals){
-//			panel.add( animal( a ) );
-//		}
-//
-//		return panel;
-//	}
 	
 	private JLabel animal( Animal animal ) {
 		
