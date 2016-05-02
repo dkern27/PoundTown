@@ -17,7 +17,7 @@ public class StartDialog extends JDialog{
 
 	public StartDialog( ) {
 		setTitle("Welcome to #Town!");
-		setSize(500, 240);
+		setSize(500, 200);
 		setLocation(250,200);
 		setModal(true);
 		setLayout(new FlowLayout());
@@ -34,6 +34,7 @@ public class StartDialog extends JDialog{
 		
 		JTextArea message = new JTextArea("Oh no! The tornado has swept away all your animals! Explore the island and find the animals on your list. To capture one, click on the animal with a binary number corresponding to a decimal number on your checklist.");
 		
+	
 		message.setBackground(Color.CYAN);
 		message.setEditable(false);
 		message.setFont(font);
