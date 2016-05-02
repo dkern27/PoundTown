@@ -55,6 +55,12 @@ public class LocationGUI extends JPanel implements MouseListener {
 	//Gives set locations for animals
 	public void populate(){
 		//All in a line
+		animalLocations.add(new Point(100, 325));
+		animalLocations.add(new Point(200, 325));
+		animalLocations.add(new Point(300, 325));
+		animalLocations.add(new Point(400, 325));
+		animalLocations.add(new Point(500, 325));
+		animalLocations.add(new Point(600, 325));
 	}
 	
 	public void mouseClicked(MouseEvent e) {
