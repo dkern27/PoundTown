@@ -86,7 +86,7 @@ public class LocationGUI extends JPanel implements MouseListener {
 					}
 				}
 				else
-					JOptionPane.showMessageDialog(this, "Oops! That wasn't one of your animals!");
+					JOptionPane.showMessageDialog(this, "Oops! That wasn't one of your animals!","", JOptionPane.PLAIN_MESSAGE);
 				removeMouseListener(this);
 				maingui.returnToMap();
 			}
