@@ -35,7 +35,7 @@ public class LevelGUI extends JPanel implements MouseListener {
 			e.printStackTrace();
 		}
 		
-		addMouseListener(this);
+		startMouseListener();
 		
 	}
 
@@ -59,15 +59,19 @@ public class LevelGUI extends JPanel implements MouseListener {
 		g.drawImage(toFind,0,0,null);
 	}
 	
+	public void startMouseListener(){
+		addMouseListener(this);
+	}
+	
 	public void mouseClicked(MouseEvent e) {
 		for (MapClickBox c : GameEngine.clickBoxes){
 			if(c.contains(e.getX(), e.getY())){
 				
 				GameEngine.currentLocation = c.getLocationType();
 				LocationGUI loc = new LocationGUI( GameEngine.currentLocation,
-						maingui.theGame.getCurrentLocation().getAnimals(),
+						maingui.getTheGame().getCurrentLocation().getAnimals(),
 						maingui );
-				maingui.displayPanel(loc);
+				maingui.goToLocation(loc);
 				
 				removeMouseListener(this);
 			}

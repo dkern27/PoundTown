@@ -12,14 +12,13 @@ import javax.swing.border.TitledBorder;
 
 public class MainGUI extends JFrame{
 	
-	GameEngine theGame;
+	private GameEngine theGame;
 	public LocationType locationToDraw;
-	LevelGUI levelMap;
-	LocationGUI locationGUI;
-	JPanel currentPanel;
-	Opener opener;
-	CheckListGUI checklist;
-	JPanel sidebar;
+	private LevelGUI levelMap;
+	private JPanel currentPanel;
+	private Opener opener;
+	private CheckListGUI checklist;
+	private JPanel sidebar;
 	
 	public MainGUI( GameEngine theGame ) {
 
@@ -44,9 +43,10 @@ public class MainGUI extends JFrame{
 		//Clear the window
 		getContentPane().removeAll();
 		
-		currentPanel = new LevelGUI( theGame.getLevels().get(theGame.getCurrentLevel()).getLookForFile(),
+		levelMap = new LevelGUI( theGame.getLevels().get(theGame.getCurrentLevel()).getLookForFile(),
 				theGame.getLevels().get(theGame.getCurrentLevel()).getLocations(),
 				this );
+		currentPanel = levelMap;
 		add(currentPanel, BorderLayout.CENTER);
 		
 		//Build sidebar
@@ -80,7 +80,7 @@ public class MainGUI extends JFrame{
 	}
 	
 	
-	public void displayPanel(JPanel panel){
+	public void goToLocation(JPanel panel){
 		
 			remove(currentPanel);
 			currentPanel=panel;
@@ -89,10 +89,25 @@ public class MainGUI extends JFrame{
 			this.repaint();
 	}
 	
+	public void returnToMap(){
+		remove(currentPanel);
+		currentPanel = levelMap;
+		levelMap.startMouseListener();
+		add(currentPanel,BorderLayout.CENTER);
+		this.validate();
+		this.repaint();
+		
+	}
+	
+	
 	public void updateChecklistGUI(){
 		sidebar.remove(checklist);
 		checklist = theGame.getLevels().get(theGame.getCurrentLevel()).getChecklist().draw();
 		sidebar.add(checklist);
+	}
+	
+	public GameEngine getTheGame(){
+		return theGame;
 	}
 
 }

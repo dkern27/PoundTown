@@ -63,19 +63,10 @@ public class LocationGUI extends JPanel implements MouseListener {
 		animalLocations.add(new Point(175, 400));
 	}
 
-	//Code that goes back to the main map when the back arrow or an animal is clicked
-	public void backToMap() {
-		GameEngine.currentLocation = null;
-		LevelGUI level= new LevelGUI( maingui.theGame.getCurrentLevelLEVEL().getLookForFile(),
-				maingui.theGame.getCurrentLevelLEVEL().getLocations(),maingui);
-
-		maingui.displayPanel(level);
-	}
-	
 	//checks to see if animal that was just clicked on is in the checklist
 	//Not sure what we want to do if it is not in the checklist. We discussed a punishment of some sort but not sure if we're still doing that
 	public boolean checkAnimalToChecklist(Animal a) {
-		if (a.found(CheckList.getChecklist())) {
+		if (a.found(maingui.getTheGame().getCurrentLevelLEVEL().getChecklist().getChecklist())) {
 			//If in checklist do something
 			a.setFound(true);
 			maingui.updateChecklistGUI();
@@ -89,7 +80,7 @@ public class LocationGUI extends JPanel implements MouseListener {
 	public void mouseClicked(MouseEvent e) {
 		if(e.getX() < 60 && e.getY() < 60 ){ // This makes the gui go back to the map if you click in the top left corner.
 			//Also goes back to the map if you click on an animal, after checking to see if animal is in the checklist.
-			backToMap();	
+			maingui.returnToMap();	
 			removeMouseListener(this);
 		}
 //		if (e.getX() > 50 && e.getX() < 100 && e.getY() > 250 && e.getY() < 335) {
@@ -131,7 +122,7 @@ public class LocationGUI extends JPanel implements MouseListener {
 				else
 					JOptionPane.showMessageDialog(this, "Oops! That wasn't one of your animals!");
 				removeMouseListener(this);
-				backToMap();	
+				maingui.returnToMap();
 			}
 		}
 	}

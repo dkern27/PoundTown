@@ -6,7 +6,7 @@ import java.util.Random;
 
 public class CheckList {
 
-	private static ArrayList<Animal> animals = new ArrayList<Animal>();
+	private ArrayList<Animal> animals = new ArrayList<Animal>();
 	private static final int NUM_ANIMALS_TO_FIND = 6;
 	
 	public CheckList(ArrayList<Animal> allAnimals) {
@@ -37,7 +37,7 @@ public class CheckList {
 	
 ////// Getters and Setters //////
 
-	public static ArrayList<Animal> getChecklist() {
+	public ArrayList<Animal> getChecklist() {
 		return animals;
 	}
 	
