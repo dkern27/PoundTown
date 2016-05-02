@@ -6,7 +6,9 @@ import java.util.Random;
 public class Location {
 	
 	private String name;
+	private ArrayList<Animal> checklist = new ArrayList<Animal>();
 	private ArrayList<Animal> animals = new ArrayList<Animal>();
+	private ArrayList<Animal> allAnimals = new ArrayList<Animal>();
 	private Animal correctAnimal;
 	private String backgroundFile;
 	private LocationType type;
@@ -16,22 +18,33 @@ public class Location {
 	public Location(String name, LocationType locationType, ArrayList<Animal> checklist, ArrayList<Animal> allPossibleAnimals) {
 		this.name = name;
 		this.type = locationType;
+		this.checklist = checklist;
+		this.allAnimals = allPossibleAnimals;
 		
 		
 		backgroundFile = locationType.getfileName();
+		
 		//Populate location with animals
+		populateAnimals();
+		
+		
+	}
+	
+	public void populateAnimals() {
 		Random rand = new Random();
 		
-		correctAnimal = checklist.get(rand.nextInt(checklist.size()));
+		animals.clear();
 		
+		correctAnimal = checklist.get(rand.nextInt(checklist.size()));
+
 		while( correctAnimal.getFound() ) {
 			correctAnimal = checklist.get(rand.nextInt(checklist.size()));
 		}
-		
+
 		animals.add(correctAnimal);
 		//Get 5 more animals
 		while(animals.size() < NUM_ANIMALS){
-			Animal a = allPossibleAnimals.get(rand.nextInt(allPossibleAnimals.size()));
+			Animal a = allAnimals.get(rand.nextInt(allAnimals.size()));
 			//Add if the animal is not already in animals
 			if(!animals.contains(a)){
 				animals.add(a);
@@ -40,9 +53,14 @@ public class Location {
 	}
 	
 	public LocationGUI draw( MainGUI maingui){
+		populateAnimals();
+		
 		LocationGUI gui = new LocationGUI( type, animals, maingui );
 		return gui;
 	}
+	
+	
+////// Getters and Setters //////
 	
 	public LocationType getLocationType(){
 		return type;
