@@ -63,7 +63,6 @@ public class LocationGUI extends JPanel implements MouseListener {
 		animalLocations.add(new Point(175, 400));
 	}
 	
-	@Override
 	public void mouseClicked(MouseEvent e) {
 		if(e.getX() < 60 && e.getY() < 60 ){ // This makes the gui go back to the map if you click in the top left corner.
 			//Also goes back to the map if you click on an animal, after checking to see if animal is in the checklist.
@@ -110,7 +109,7 @@ public class LocationGUI extends JPanel implements MouseListener {
 					else{
 						a.found();
 						JOptionPane.showMessageDialog(this, "Good Job! You found one of your animals!");
-						maingui.updateChecklistGUI();
+						
 					}
 				}
 				else
@@ -121,16 +120,15 @@ public class LocationGUI extends JPanel implements MouseListener {
 		}
 	}
 
-	@Override
 	public void mouseEntered(MouseEvent e) {}
 
-	@Override
+
 	public void mouseExited(MouseEvent e) {}
 
-	@Override
+
 	public void mousePressed(MouseEvent e) {}
 
-	@Override
+
 	public void mouseReleased(MouseEvent e) {}
 
 
