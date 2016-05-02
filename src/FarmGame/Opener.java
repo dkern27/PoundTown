@@ -12,7 +12,7 @@ import javax.swing.JPanel;
 
 public class Opener extends JPanel implements MouseListener {
 
-	private static final String[] files = {"/OpenerImages/StormyFarm.png","/OpenerImages/RadioWarning.png","/OpenerImages/Tornado.png"};
+	private static final String[] files = {"/OpenerImages/StormyFarm.jpg","/OpenerImages/RadioWarning.jpg","/OpenerImages/Tornado.jpg"};
 	private int currentImage = 0;
 	private BufferedImage backgroundImage;
 	private MainGUI maingui;
