@@ -9,27 +9,21 @@ public class GameEngine {
 	private int currentLevel;
 	private final int maxLevel = 4;
 	
-
-
-	
 	public GameEngine() {
 		currentLevel = 1;
 		
 		//Initialize levels
 		levels = new ArrayList<Level>();
 		levels.add(0, null);
-		//These should have maps instead of level images... but until then, this will do
 		levels.add(1, new Level( "Chicken", "/BackgroundImages/FindHens.jpg", 4, AnimalType.CHICKEN));
 		levels.add(2, new Level( "Sheep", "/BackgroundImages/FindSheep.jpg", 5, AnimalType.SHEEP));
 		levels.add(3, new Level( "Pig", "/BackgroundImages/FindPigs.jpg", 6, AnimalType.PIG));
-		levels.add(4, new Level( "Cow", "/BackgroundImages/FindCows.jpg", 7, AnimalType.COW));
-		
+		levels.add(4, new Level( "Cow", "/BackgroundImages/FindCows.jpg", 7, AnimalType.COW));	
 	}
 	
 	public void nextLevel() {
 		//Move to next level if the player has found all the animals
 		if( levels.get(currentLevel).levelComplete() ) {
-			//have message to display level up? JOptionPane.showMessageDialog(panel, "Congratulations! You beat level " + Integer.toString(currentLevel)) + "!");
 			currentLevel++;
 		}
 		else {
@@ -53,13 +47,11 @@ public class GameEngine {
 		//Start the gui
 		MainGUI theGUI = new MainGUI( theGame );
 		theGUI.setVisible(true);
-		
 	}
 	
 	
 ////// Getters and Setters //////
 	
-
 	public ArrayList<Level> getLevels() {
 		return levels;
 	}
