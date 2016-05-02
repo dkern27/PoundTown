@@ -10,7 +10,6 @@ public class Location {
 	private ArrayList<Animal> animals = new ArrayList<Animal>();
 	private ArrayList<Animal> allAnimals = new ArrayList<Animal>();
 	private Animal correctAnimal;
-	private String backgroundFile;
 	private LocationType type;
 	
 	private static final int NUM_ANIMALS = 6;
@@ -20,9 +19,6 @@ public class Location {
 		this.type = locationType;
 		this.checklist = checklist;
 		this.allAnimals = allPossibleAnimals;
-		
-		
-		backgroundFile = locationType.getfileName();
 		
 		//Populate location with animals
 		populateAnimals();
