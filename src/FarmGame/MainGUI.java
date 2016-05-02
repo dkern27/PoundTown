@@ -101,7 +101,7 @@ public class MainGUI extends JFrame{
 	public void returnToMap(){
 		
 		if(theGame.getCurrentLevel().levelComplete()){
-			JOptionPane.showMessageDialog(this, "Congratulations! You Completed Level " + theGame.getCurrentLevelNumber()+"!");
+			JOptionPane.showMessageDialog(this, "Congratulations! You Completed Level " + theGame.getCurrentLevelNumber()+"!", "", JOptionPane.INFORMATION_MESSAGE, new ImageIcon(getClass().getResource("/TrophyImage/Trophy.png")));
 			theGame.nextLevel();
 			
 			if(theGame.gameOver()) {
