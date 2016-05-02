@@ -67,10 +67,6 @@ public class LevelGUI extends JPanel implements MouseListener {
 				
 				LocationType type = c.getLocationType();
 				
-				System.out.println(type);
-				
-				System.out.println(locations.get( type ));
-				
 				LocationGUI loc = locations.get( type ).draw( maingui );
 						
 				maingui.goToLocation(loc);

@@ -40,6 +40,18 @@ public class MainGUI extends JFrame{
 		//Clear the window
 		getContentPane().removeAll();
 		
+		drawLevel();
+		
+		//Start Dialog
+		StartDialog start = new StartDialog();
+		start.setVisible(true);
+	}
+	
+	public void drawLevel(){
+		
+		//Clear the window
+		getContentPane().removeAll();
+		
 		levelMap = new LevelGUI( theGame.getLevels().get(theGame.getCurrentLevelNumber()).getLookForFile(),
 				theGame.getCurrentLevel().getLocations(),
 				this );
@@ -51,7 +63,14 @@ public class MainGUI extends JFrame{
 		sidebar.setLayout(new BoxLayout( sidebar, BoxLayout.PAGE_AXIS ));
 
 		//Add level identifier to sidebar
-		updateLevelPanel();
+		currentLevelPanel = new JPanel();
+		currentLevelPanel.setBorder(new TitledBorder(new EtchedBorder(), ""));
+		JLabel levelText = new JLabel("Level " + theGame.getCurrentLevelNumber() );
+		Font font = new Font("Comic Sans MS", Font.PLAIN, 45);
+		levelText.setFont(font);
+		levelText.setHorizontalAlignment(JLabel.CENTER);
+		levelText.setVerticalAlignment(JLabel.CENTER);
+		currentLevelPanel.add(levelText);
 		sidebar.add(currentLevelPanel);
 		
 		//Add the checklist to the sidebar
@@ -63,12 +82,7 @@ public class MainGUI extends JFrame{
 		
 		this.validate();
 		this.repaint();
-		
-		//Start Dialog
-		StartDialog start = new StartDialog();
-		start.setVisible(true);
 	}
-	
 	
 	public void goToLocation(JPanel panel){
 			remove(currentPanel);
@@ -82,43 +96,14 @@ public class MainGUI extends JFrame{
 		if(theGame.getCurrentLevel().levelComplete()){
 			JOptionPane.showMessageDialog(this, "Congratulations! You Completed Level " + theGame.getCurrentLevelNumber()+"!");
 			theGame.nextLevel();
-			levelMap = new LevelGUI(theGame.getLevels().get(theGame.getCurrentLevelNumber()).getLookForFile(),
-				theGame.getCurrentLevel().getLocations(),
-				this);
-			updateChecklistGUI();
-			updateLevelPanel();
+			
 		}
-		remove(currentPanel);
-		currentPanel = levelMap;
+		drawLevel();
 		levelMap.startMouseListener();
-		add(currentPanel,BorderLayout.CENTER);
-		this.validate();
-		this.repaint();
-		
-	}
-	
-	
-	public void updateChecklistGUI(){
-		sidebar.remove(checklist);
-		checklist = theGame.getLevels().get(theGame.getCurrentLevelNumber()).getChecklist().draw();
-		sidebar.add(checklist);
 	}
 	
 	public GameEngine getTheGame(){
 		return theGame;
 	}
 	
-	public void updateLevelPanel(){
-		currentLevelPanel = null;
-		currentLevelPanel = new JPanel();
-		currentLevelPanel.setBorder(new TitledBorder(new EtchedBorder(), ""));
-		JLabel levelText = new JLabel("Level " + theGame.getCurrentLevelNumber() );
-		Font font = new Font("Comic Sans MS", Font.PLAIN, 45);
-		levelText.setFont(font);
-		levelText.setHorizontalAlignment(JLabel.CENTER);
-		levelText.setVerticalAlignment(JLabel.CENTER);
-		currentLevelPanel.add(levelText);
-		
-	}
-
 }
