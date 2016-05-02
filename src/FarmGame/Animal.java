@@ -36,17 +36,29 @@ public class Animal implements Comparable<Animal>{
 	
 	//Draws the animal image
 	public void draw(Graphics g, int x, int y){
-		BufferedImage animalImage = null;
-		try {
-			animalImage = ImageIO.read( getClass().getResource(drawFile) );
-		} catch (IOException e) {
-			e.printStackTrace();
+		
+		if( found ) {
+			return;
 		}
-		g.drawImage(animalImage, x, y, null);
-		rect = new Rectangle(x,y,75,95); //the area that the image takes up which you can click on
-		g.setFont(new Font("Comic Sans MS", Font.BOLD, 24));
-		//decimal Value for testing. Spacing is approximately good when using binary
-		g.drawString(Integer.toString(decimalValue), x-(binaryValue.length()-4)*4, y-10);
+		else {
+			BufferedImage animalImage = null;
+			
+			try {
+				animalImage = ImageIO.read( getClass().getResource(drawFile) );
+			} catch (IOException e) {
+				e.printStackTrace();
+			}
+			
+			g.drawImage(animalImage, x, y, null);
+			
+			rect = new Rectangle(x,y,75,95); //the area that the image takes up which you can click on
+			g.setFont(new Font("Comic Sans MS", Font.BOLD, 24));
+			
+			//decimal Value for testing. Spacing is approximately good when using binary
+			g.drawString(Integer.toString(decimalValue), x-(binaryValue.length()-4)*4, y-10);
+		}
+		
+		
 	}
 	
 	//Helper function to convert decimal to binary
