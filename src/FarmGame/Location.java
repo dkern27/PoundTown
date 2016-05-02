@@ -46,7 +46,7 @@ public class Location {
 		while(animals.size() < NUM_ANIMALS){
 			Animal a = allAnimals.get(rand.nextInt(allAnimals.size()));
 			//Add if the animal is not already in animals
-			if(!animals.contains(a)){
+			if(!animals.contains(a) && !checklist.contains(a)){
 				animals.add(a);
 			}
 		}

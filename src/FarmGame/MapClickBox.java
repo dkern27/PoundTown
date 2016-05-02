@@ -1,8 +1,5 @@
 package FarmGame;
 
-import java.awt.Color;
-import java.awt.Graphics;
-
 public class MapClickBox {
 
 	private int height;

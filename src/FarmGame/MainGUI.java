@@ -1,10 +1,6 @@
 package FarmGame;
 
 import java.awt.*;
-import java.awt.event.MouseEvent;
-import java.awt.event.MouseListener;
-import java.util.ArrayList;
-import java.util.Map;
 
 import javax.swing.*;
 import javax.swing.border.EtchedBorder;

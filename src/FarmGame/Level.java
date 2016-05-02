@@ -1,22 +1,17 @@
 package FarmGame;
 
-import java.awt.BorderLayout;
-import java.awt.Graphics;
-import java.awt.event.MouseEvent;
-import java.awt.event.MouseListener;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.Map;
-import java.util.Random;
 
 public class Level {
 	
 	private String name;
 	private String lookForFile;
-	private Map<LocationType,Location> locations = new HashMap();
+	private Map<LocationType,Location> locations = new HashMap<LocationType, Location>();
 	private CheckList checklist;
 	private int numDigits;
-	private ArrayList<Animal> animals = new ArrayList();
+	private ArrayList<Animal> animals = new ArrayList<Animal>();
 	private AnimalType animalType;
 	
 	public Level( String name, String lookForFile, int numDigits, AnimalType animalType) {
