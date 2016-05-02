@@ -62,7 +62,7 @@ public class LevelGUI extends JPanel implements MouseListener {
 	}
 	
 	public void mouseClicked(MouseEvent e) {
-		for (MapClickBox c : GameEngine.clickBoxes){
+		for (MapClickBox c : maingui.getClickBoxes() ){
 			if(c.contains(e.getX(), e.getY())){
 				
 				LocationType type = c.getLocationType();

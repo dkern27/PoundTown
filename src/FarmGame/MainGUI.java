@@ -1,6 +1,7 @@
 package FarmGame;
 
 import java.awt.*;
+import java.util.ArrayList;
 
 import javax.swing.*;
 import javax.swing.border.EtchedBorder;
@@ -15,11 +16,15 @@ public class MainGUI extends JFrame{
 	private Opener opener;
 	private CheckListGUI checklist;
 	private JPanel sidebar;
-	private JPanel currentLevelPanel; 
+	private JPanel currentLevelPanel;
+	
+	private static ArrayList<MapClickBox> clickBoxes = new ArrayList<MapClickBox>();
 	
 	public MainGUI( GameEngine theGame ) {
 
 		this.theGame = theGame;
+		
+		generateClickBoxes();
 		
 		//Open new window
 		setSize(1000, 530);
@@ -109,10 +114,22 @@ public class MainGUI extends JFrame{
 		levelMap.startMouseListener();
 	}
 	
+	private void generateClickBoxes() {
+		clickBoxes.add(new MapClickBox(110,200,150,150,LocationType.FOREST));
+		clickBoxes.add(new MapClickBox(110,150,350,40,LocationType.VOLCANO));
+		clickBoxes.add(new MapClickBox(75,160,420,200,LocationType.POND));
+		clickBoxes.add(new MapClickBox(60,210,320,320,LocationType.FIELD));
+		clickBoxes.add(new MapClickBox(115,110,600,260,LocationType.TOWN));
+	}
+	
 ////// Getters and Setters //////
 	
 	public GameEngine getTheGame(){
 		return theGame;
+	}
+	
+	public ArrayList<MapClickBox> getClickBoxes() {
+		return clickBoxes;
 	}
 	
 }
