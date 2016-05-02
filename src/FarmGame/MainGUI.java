@@ -109,6 +109,8 @@ public class MainGUI extends JFrame{
 		levelMap.startMouseListener();
 	}
 	
+////// Getters and Setters //////
+	
 	public GameEngine getTheGame(){
 		return theGame;
 	}
