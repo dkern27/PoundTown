@@ -105,9 +105,8 @@ public class MainGUI extends JFrame{
 			theGame.nextLevel();
 			
 			if(theGame.gameOver()) {
-				GameOver theEnd = new GameOver();
-				theEnd.setVisible(true);
-				return;
+				JOptionPane.showMessageDialog(this, "Good Job! You've found all your animals and finished the game!", "Game Over", JOptionPane.INFORMATION_MESSAGE, new ImageIcon(getClass().getResource("/TrophyImage/Trophy.png")));
+				System.exit(0);
 			}
 			
 		}
