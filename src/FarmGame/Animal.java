@@ -51,7 +51,7 @@ public class Animal implements Comparable<Animal>{
 			
 			g.drawImage(animalImage, x, y, null);
 			
-			rect = new Rectangle(x,y,75,95); //the area that the image takes up which you can click on
+			rect = new Rectangle(x,y-30,75,125); //the area that the image takes up which you can click on
 			g.setFont(new Font("Comic Sans MS", Font.BOLD, 24));
 			g.setColor(Color.WHITE);
 			//decimal Value for testing. Spacing is approximately good when using binary
