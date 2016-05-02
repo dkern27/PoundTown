@@ -93,9 +93,16 @@ public class MainGUI extends JFrame{
 	}
 	
 	public void returnToMap(){
+		
 		if(theGame.getCurrentLevel().levelComplete()){
 			JOptionPane.showMessageDialog(this, "Congratulations! You Completed Level " + theGame.getCurrentLevelNumber()+"!");
 			theGame.nextLevel();
+			
+			if(theGame.gameOver()) {
+				GameOver theEnd = new GameOver();
+				theEnd.setVisible(true);
+				return;
+			}
 			
 		}
 		drawLevel();
