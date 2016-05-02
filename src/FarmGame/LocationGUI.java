@@ -7,8 +7,10 @@ import java.awt.event.MouseListener;
 import java.awt.image.BufferedImage;
 import java.io.IOException;
 import java.util.ArrayList;
+import java.util.Collections;
 
 import javax.imageio.ImageIO;
+import javax.swing.ImageIcon;
 import javax.swing.JOptionPane;
 import javax.swing.JPanel;
 
@@ -46,6 +48,7 @@ public class LocationGUI extends JPanel implements MouseListener {
 		super.paintComponent(g);
 		g.drawImage(backgroundImage, 0, 0, null);
 		g.drawImage(backArrow, 5, 5, null);
+		Collections.shuffle(animals);
 		for(int i=0; i<animals.size(); i++){
 			animals.get(i).draw(g, (int)animalLocations.get(i).getX(), (int)animalLocations.get(i).getY());
 			
@@ -55,12 +58,12 @@ public class LocationGUI extends JPanel implements MouseListener {
 	//Gives set locations for animals
 	public void populate(){
 		//All in a line
-		animalLocations.add(new Point(100, 350));
-		animalLocations.add(new Point(200, 350));
-		animalLocations.add(new Point(300, 350));
-		animalLocations.add(new Point(400, 350));
-		animalLocations.add(new Point(500, 350));
-		animalLocations.add(new Point(600, 350));
+		animalLocations.add(new Point(50, 325));
+		animalLocations.add(new Point(175, 325));
+		animalLocations.add(new Point(300, 325));
+		animalLocations.add(new Point(425, 325));
+		animalLocations.add(new Point(550, 325));
+		animalLocations.add(new Point(675, 325));
 	}
 	
 	public void mouseClicked(MouseEvent e) {
@@ -77,7 +80,7 @@ public class LocationGUI extends JPanel implements MouseListener {
 						JOptionPane.showMessageDialog(this, "You already found this animal!");
 					else{
 						a.found();
-						JOptionPane.showMessageDialog(this, "Good Job! You found one of your animals!");
+						JOptionPane.showMessageDialog(this, "Good Job! You found one of your animals!", "", JOptionPane.INFORMATION_MESSAGE, new ImageIcon("/AnimalImages/Chicken.png"));
 						
 					}
 				}
