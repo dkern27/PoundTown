@@ -2,6 +2,9 @@ package FarmGame;
 
 import java.util.ArrayList;
 
+import javax.swing.JOptionPane;
+import javax.swing.JPanel;
+
 public class GameEngine {
 
 	private ArrayList<Level> levels;
@@ -30,6 +33,7 @@ public class GameEngine {
 	public void nextLevel() {
 		//Move to next level if the player has found all the animals
 		if( levels.get(currentLevel).levelComplete() ) {
+			//have message to display level up? JOptionPane.showMessageDialog(panel, "Congratulations! You beat level " + Integer.toString(currentLevel)) + "!");
 			currentLevel++;
 		}
 		else {
