@@ -46,7 +46,7 @@ public class Level {
 		
 		//Calculate the maximum possible value given the number of binary digits
 		double maxNum = Math.pow(2, (numDigits))-1; 
-		
+
 		//Make an array of all the possible animals
 		for( int i=0; i <= maxNum; i++ ) {
 			animals.add( new Animal( animalType, i, numDigits ));

@@ -16,11 +16,12 @@ public class AnimalTests {
 	
 	@Before
 	public void setUp(){
-		level = new Level("2",  "/AnimalImages/Sheep.png", 3, AnimalType.PIG);
+		level = new Level("2",  "/AnimalImages/Pig.png", 4, AnimalType.PIG);
 		animals = level.getAnimalsList();
 	}
 	
 	@Test
+	//Tests binary and decimal equivalence
 	public void testDecimalMatchingBinary(){
 		int digits=level.getDigits();
 		
@@ -40,59 +41,42 @@ public class AnimalTests {
 		}
 	}
 	
+	
 	@Test
+	//Tests random values selected for animals
 	public void testAnimalValues(){
-		int num0 = 0;
-		int num1 = 0;
-		int num2 = 0;
-		int num3 = 0;
-		int num4 = 0;
-		int num5 = 0;
-		int num6 = 0;
-		int num7 = 0;
-		for(int i=0; i<10;i++){
+		int num0=0;
+		int num5=0;
+		int num10=0;
+		int num15=0;
+		for(int i=0; i<25;i++){
 			//String name, String backgroundFile, int numDigits, AnimalType animalType, String animalDrawFile 
-			Level l = new Level("1",  "/AnimalImages/Sheep.png", 3, AnimalType.PIG);
-			for(Animal a: l.getLocations().get(0).getAnimals()){
+			Level l = new Level("1",  "/AnimalImages/Pig.png", 4, AnimalType.PIG);
+			for(Animal a: l.getLocations().get(LocationType.POND).getAnimals()){
 				switch(a.getDecimalValue()){
 				case 0: 
 					num0++;
 					break;
-				case 1:
-					num1++;
-					break;
-				case 2:
-					num2++;
-					break;
-				case 3:
-					num3++;
-					break;
-				case 4: 
-					num4++;
-					break;
 				case 5:
 					num5++;
 					break;
-				case 6:
-					num6++;
+				case 10:
+					num10++;
 					break;
-				case 7:
-					num7++;
+				case 15:
+					num15++;
 					break;
 				default:
-					fail("Number out of range for number of binary digits");
+					break;
 				}
 			}
 	
 		}
 		assertTrue(num0>0);
-		assertTrue(num1>0);
-		assertTrue(num2>0);
-		assertTrue(num3>0);
-		assertTrue(num4>0);
 		assertTrue(num5>0);
-		assertTrue(num6>0);
-		assertTrue(num7>0);
+		assertTrue(num10>0);
+		assertTrue(num15>0);
+
 	}
 	
 	
