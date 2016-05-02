@@ -54,13 +54,13 @@ public class LocationGUI extends JPanel implements MouseListener {
 
 	//Gives set locations for animals
 	public void populate(){
-		//And i'm just making up these points
-		animalLocations.add(new Point(50, 250));
-		animalLocations.add(new Point(50, 400));
-		animalLocations.add(new Point(300, 250));
-		animalLocations.add(new Point(300, 400));
-		animalLocations.add(new Point(175, 250));
-		animalLocations.add(new Point(175, 400));
+		//All in a line
+		animalLocations.add(new Point(100, 350));
+		animalLocations.add(new Point(200, 350));
+		animalLocations.add(new Point(300, 350));
+		animalLocations.add(new Point(400, 350));
+		animalLocations.add(new Point(500, 350));
+		animalLocations.add(new Point(600, 350));
 	}
 	
 	public void mouseClicked(MouseEvent e) {
@@ -69,38 +69,7 @@ public class LocationGUI extends JPanel implements MouseListener {
 			maingui.returnToMap();	
 			removeMouseListener(this);
 		}
-//		if (e.getX() > 50 && e.getX() < 100 && e.getY() > 250 && e.getY() < 335) {
-//			checkAnimalToChecklist(animals.get(0));
-//			backToMap();	
-//			removeMouseListener(this);
-//		}
-//		if (e.getX() > 50 && e.getX() < 100 && e.getY() > 400 && e.getY() < 485) {
-//			checkAnimalToChecklist(animals.get(1));
-//			backToMap();	
-//			removeMouseListener(this);
-//		}
-//		if (e.getX() > 175 && e.getX() < 225 && e.getY() > 250 && e.getY() < 335) {
-//			checkAnimalToChecklist(animals.get(2));
-//			backToMap();	
-//			removeMouseListener(this);
-//		}
-//		if (e.getX() > 175 && e.getX() < 225 && e.getY() > 400 && e.getY() < 485) {
-//			checkAnimalToChecklist(animals.get(3));
-//			backToMap();	
-//			removeMouseListener(this);
-//		}
-//		if (e.getX() > 300 && e.getX() < 350 && e.getY() > 250 && e.getY() < 335) {
-//			checkAnimalToChecklist(animals.get(4));
-//			backToMap();	
-//			removeMouseListener(this);
-//		}
-//		if (e.getX() > 300 && e.getX() < 350 && e.getY() > 400 && e.getY() < 485) {
-//			checkAnimalToChecklist(animals.get(5));
-//			backToMap();	
-//			removeMouseListener(this);
-//		}
 		
-		//just since we might want to change the location of the animals, or add more
 		for(Animal a : animals){
 			if (a.getRectangle().contains(e.getX(),e.getY())) {
 				if(maingui.getTheGame().getCurrentLevel().getChecklist().getChecklist().contains(a)){

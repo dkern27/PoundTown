@@ -1,5 +1,6 @@
 package FarmGame;
 
+import java.awt.Color;
 import java.awt.Font;
 import java.awt.Graphics;
 import java.awt.Rectangle;
@@ -52,7 +53,7 @@ public class Animal implements Comparable<Animal>{
 			
 			rect = new Rectangle(x,y,75,95); //the area that the image takes up which you can click on
 			g.setFont(new Font("Comic Sans MS", Font.BOLD, 24));
-			
+			g.setColor(Color.WHITE);
 			//decimal Value for testing. Spacing is approximately good when using binary
 			g.drawString(Integer.toString(decimalValue), x-(binaryValue.length()-4)*4, y-10);
 		}
