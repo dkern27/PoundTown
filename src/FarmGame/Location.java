@@ -15,11 +15,19 @@ public class Location {
 
 	public Location(String name, LocationType locationType, ArrayList<Animal> checklist, ArrayList<Animal> allPossibleAnimals) {
 		this.name = name;
+		this.type = locationType;
+		
 		
 		backgroundFile = locationType.getfileName();
 		//Populate location with animals
 		Random rand = new Random();
+		
 		correctAnimal = checklist.get(rand.nextInt(checklist.size()));
+		
+		while( correctAnimal.getFound() ) {
+			correctAnimal = checklist.get(rand.nextInt(checklist.size()));
+		}
+		
 		animals.add(correctAnimal);
 		//Get 5 more animals
 		while(animals.size() < NUM_ANIMALS){
@@ -31,10 +39,10 @@ public class Location {
 		}
 	}
 	
-//	public LocationGUI draw(){
-//		LocationGUI gui = new LocationGUI(backgroundFile, animals);
-//		return gui;
-//	}
+	public LocationGUI draw( MainGUI maingui){
+		LocationGUI gui = new LocationGUI( type, animals, maingui );
+		return gui;
+	}
 	
 	public LocationType getLocationType(){
 		return type;

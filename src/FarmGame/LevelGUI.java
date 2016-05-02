@@ -67,10 +67,14 @@ public class LevelGUI extends JPanel implements MouseListener {
 		for (MapClickBox c : GameEngine.clickBoxes){
 			if(c.contains(e.getX(), e.getY())){
 				
-				GameEngine.currentLocation = c.getLocationType();
-				LocationGUI loc = new LocationGUI( GameEngine.currentLocation,
-						maingui.getTheGame().getCurrentLocation().getAnimals(),
-						maingui );
+				LocationType type = c.getLocationType();
+				
+				System.out.println(type);
+				
+				System.out.println(locations.get( type ));
+				
+				LocationGUI loc = locations.get( type ).draw( maingui );
+						
 				maingui.goToLocation(loc);
 				
 				removeMouseListener(this);
