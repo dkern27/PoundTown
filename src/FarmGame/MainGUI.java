@@ -27,7 +27,7 @@ public class MainGUI extends JFrame{
 		generateClickBoxes();
 		
 		//Open new window
-		setSize(1000, 530);
+		setSize(1000, 525);
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		setResizable(false);
 		
@@ -69,6 +69,7 @@ public class MainGUI extends JFrame{
 
 		//Add level identifier to sidebar
 		currentLevelPanel = new JPanel();
+		currentLevelPanel.setBackground(new Color(255,215,0));
 		currentLevelPanel.setBorder(new TitledBorder(new EtchedBorder(), ""));
 		JLabel levelText = new JLabel("Level " + theGame.getCurrentLevelNumber() );
 		Font font = new Font("Comic Sans MS", Font.PLAIN, 45);

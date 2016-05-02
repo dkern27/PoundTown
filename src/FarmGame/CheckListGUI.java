@@ -6,6 +6,7 @@ import java.awt.GridLayout;
 import java.awt.font.TextAttribute;
 import java.util.ArrayList;
 import java.util.Map;
+import java.awt.Color;
 
 
 import javax.swing.JLabel;
@@ -26,10 +27,11 @@ public class CheckListGUI extends JPanel {
 	public void makeLayout(){
 		setLayout(new GridLayout(1,0));
 		
+		
 		JPanel panel = new JPanel();
 		panel.setLayout(new GridLayout(8,1));
 		panel.setBorder(new TitledBorder(new EtchedBorder(), ""));
-
+		panel.setBackground(new Color(222,184,135));
 		Font font = new Font("Comic Sans MS", Font.PLAIN, 25);
 		
 		JLabel field = new JLabel("Animals to Find:");
