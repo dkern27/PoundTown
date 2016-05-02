@@ -73,7 +73,7 @@ public class GameEngine {
 		return levels;
 	}
 
-	public int getCurrentLevel() {
+	public int getCurrentLevelNumber() {
 		return currentLevel;
 	}
 	
@@ -85,7 +85,7 @@ public class GameEngine {
 		currentLevel=c;
 	}
 	
-	public Level getCurrentLevelLEVEL(){
+	public Level getCurrentLevel(){
 		return levels.get(currentLevel);
 	}
 	

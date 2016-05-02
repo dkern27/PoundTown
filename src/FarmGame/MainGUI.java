@@ -19,6 +19,7 @@ public class MainGUI extends JFrame{
 	private Opener opener;
 	private CheckListGUI checklist;
 	private JPanel sidebar;
+	private JPanel currentLevelPanel; 
 	
 	public MainGUI( GameEngine theGame ) {
 
@@ -43,8 +44,8 @@ public class MainGUI extends JFrame{
 		//Clear the window
 		getContentPane().removeAll();
 		
-		levelMap = new LevelGUI( theGame.getLevels().get(theGame.getCurrentLevel()).getLookForFile(),
-				theGame.getLevels().get(theGame.getCurrentLevel()).getLocations(),
+		levelMap = new LevelGUI( theGame.getLevels().get(theGame.getCurrentLevelNumber()).getLookForFile(),
+				theGame.getCurrentLevel().getLocations(),
 				this );
 		currentPanel = levelMap;
 		add(currentPanel, BorderLayout.CENTER);
@@ -54,18 +55,11 @@ public class MainGUI extends JFrame{
 		sidebar.setLayout(new BoxLayout( sidebar, BoxLayout.PAGE_AXIS ));
 
 		//Add level identifier to sidebar
-		JPanel level = new JPanel();
-		level.setBorder(new TitledBorder(new EtchedBorder(), ""));
-		JLabel levelText = new JLabel("Level " + theGame.getCurrentLevel() );
-		Font font = new Font("Comic Sans MS", Font.PLAIN, 45);
-		levelText.setFont(font);
-		levelText.setHorizontalAlignment(JLabel.CENTER);
-		levelText.setVerticalAlignment(JLabel.CENTER);
-		level.add(levelText);
-		sidebar.add(level);
+		updateLevelPanel();
+		sidebar.add(currentLevelPanel);
 		
 		//Add the checklist to the sidebar
-		checklist = theGame.getLevels().get(theGame.getCurrentLevel()).getChecklist().draw();
+		checklist = theGame.getLevels().get(theGame.getCurrentLevelNumber()).getChecklist().draw();
 		sidebar.add(checklist);
 
 		//Add sidebar to main gui
@@ -81,7 +75,6 @@ public class MainGUI extends JFrame{
 	
 	
 	public void goToLocation(JPanel panel){
-		
 			remove(currentPanel);
 			currentPanel=panel;
 			add(panel,BorderLayout.CENTER);
@@ -90,6 +83,15 @@ public class MainGUI extends JFrame{
 	}
 	
 	public void returnToMap(){
+		if(theGame.getCurrentLevel().levelComplete()){
+			JOptionPane.showMessageDialog(this, "Congratulations! You Completed Level " + theGame.getCurrentLevelNumber()+"!");
+			theGame.nextLevel();
+			levelMap = new LevelGUI(theGame.getLevels().get(theGame.getCurrentLevelNumber()).getLookForFile(),
+				theGame.getCurrentLevel().getLocations(),
+				this);
+			updateChecklistGUI();
+			updateLevelPanel();
+		}
 		remove(currentPanel);
 		currentPanel = levelMap;
 		levelMap.startMouseListener();
@@ -102,12 +104,25 @@ public class MainGUI extends JFrame{
 	
 	public void updateChecklistGUI(){
 		sidebar.remove(checklist);
-		checklist = theGame.getLevels().get(theGame.getCurrentLevel()).getChecklist().draw();
+		checklist = theGame.getLevels().get(theGame.getCurrentLevelNumber()).getChecklist().draw();
 		sidebar.add(checklist);
 	}
 	
 	public GameEngine getTheGame(){
 		return theGame;
+	}
+	
+	public void updateLevelPanel(){
+		currentLevelPanel = null;
+		currentLevelPanel = new JPanel();
+		currentLevelPanel.setBorder(new TitledBorder(new EtchedBorder(), ""));
+		JLabel levelText = new JLabel("Level " + theGame.getCurrentLevelNumber() );
+		Font font = new Font("Comic Sans MS", Font.PLAIN, 45);
+		levelText.setFont(font);
+		levelText.setHorizontalAlignment(JLabel.CENTER);
+		levelText.setVerticalAlignment(JLabel.CENTER);
+		currentLevelPanel.add(levelText);
+		
 	}
 
 }

@@ -62,19 +62,6 @@ public class LocationGUI extends JPanel implements MouseListener {
 		animalLocations.add(new Point(175, 250));
 		animalLocations.add(new Point(175, 400));
 	}
-
-	//checks to see if animal that was just clicked on is in the checklist
-	//Not sure what we want to do if it is not in the checklist. We discussed a punishment of some sort but not sure if we're still doing that
-	public boolean checkAnimalToChecklist(Animal a) {
-		if (a.found(maingui.getTheGame().getCurrentLevelLEVEL().getChecklist().getChecklist())) {
-			//If in checklist do something
-			a.setFound(true);
-			maingui.updateChecklistGUI();
-			return true;
-		}
-		//else punishment. Or nothing. Whichever
-		return false;
-	}
 	
 	@Override
 	public void mouseClicked(MouseEvent e) {
@@ -117,8 +104,15 @@ public class LocationGUI extends JPanel implements MouseListener {
 		//just since we might want to change the location of the animals, or add more
 		for(Animal a : animals){
 			if (a.getRectangle().contains(e.getX(),e.getY())) {
-				if(checkAnimalToChecklist(a))
-					JOptionPane.showMessageDialog(this, "Good Job! You found one of your animals!");
+				if(maingui.getTheGame().getCurrentLevel().getChecklist().getChecklist().contains(a)){
+					if(a.getFound())
+						JOptionPane.showMessageDialog(this, "You already found this animal!");
+					else{
+						a.found();
+						JOptionPane.showMessageDialog(this, "Good Job! You found one of your animals!");
+						maingui.updateChecklistGUI();
+					}
+				}
 				else
 					JOptionPane.showMessageDialog(this, "Oops! That wasn't one of your animals!");
 				removeMouseListener(this);

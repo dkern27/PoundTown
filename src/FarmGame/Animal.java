@@ -30,11 +30,8 @@ public class Animal implements Comparable<Animal>{
 	}
 
 	//Double checks animal is on list and sets found to true
-	public boolean found(ArrayList<Animal> checklist){
-		if(checklist.contains(this)){
-			found = true;
-		}
-		return found;
+	public void found(){
+		found = true;
 	}
 	
 	//Draws the animal image

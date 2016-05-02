@@ -35,6 +35,7 @@ public class CheckList {
 	}
 	
 	
+	
 ////// Getters and Setters //////
 
 	public ArrayList<Animal> getChecklist() {

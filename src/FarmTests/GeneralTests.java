@@ -29,11 +29,11 @@ public class GeneralTests {
 	public void testMoveToNextLevel() {
 		
 		//Load the checklist
-		CheckList checklist = game.getLevels().get(game.getCurrentLevel()).getChecklist();
+		CheckList checklist = game.getLevels().get(game.getCurrentLevelNumber()).getChecklist();
 		
 		//Find all the animals on the list
 		for( Animal a : checklist.getChecklist() ) {
-			a.found(checklist.getChecklist());
+			a.found();
 		}
 		
 		//All the animals should now be found
@@ -43,7 +43,7 @@ public class GeneralTests {
 		game.nextLevel();
 		
 		//If everything works, game is now on second level
-		assertEquals( 2, game.getCurrentLevel() );
+		assertEquals( 2, game.getCurrentLevelNumber() );
 	}
 	
 	@Test

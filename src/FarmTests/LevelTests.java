@@ -40,14 +40,14 @@ public class LevelTests {
 
 			// Find all of these animals
 			for (Animal a : gEngine.getLevels().get(1).getAnimalsList()){ 
-				a.found(gEngine.getLevels().get(1).getChecklist().getChecklist());
+				a.found();
 			}
 			
 			gEngine.nextLevel();
 			
-			System.out.println("level up: " + gEngine.getCurrentLevel());
+			System.out.println("level up: " + gEngine.getCurrentLevelNumber());
 			assertTrue(gEngine.getLevels().get(1).getChecklist().foundAll());
-			assertEquals(gEngine.getCurrentLevel(),2);
+			assertEquals(gEngine.getCurrentLevelNumber(),2);
 		}
 		
 		@Test
@@ -62,14 +62,14 @@ public class LevelTests {
 			
 			// Find two of these animals
 			for (int i=0 ; i < 2; i++){ 
-				gEngine.getLevels().get(1).getAnimalsList().get(i).found(gEngine.getLevels().get(1).getChecklist().getChecklist());
+				gEngine.getLevels().get(1).getAnimalsList().get(i).found();
 			}
 
 			gEngine.nextLevel();
 			
-			System.out.println("no level up: " + gEngine.getCurrentLevel());
+			System.out.println("no level up: " + gEngine.getCurrentLevelNumber());
 			assertFalse(gEngine.getLevels().get(1).getChecklist().foundAll());
-			assertEquals(gEngine.getCurrentLevel(),1);
+			assertEquals(gEngine.getCurrentLevelNumber(),1);
 
 		}
 		
