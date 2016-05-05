@@ -40,6 +40,7 @@ public class LocationGUI extends JPanel implements MouseListener {
 			e.printStackTrace();
 		}
 		
+		
 		addMouseListener(this);
 	}
 	

@@ -114,6 +114,13 @@ public class MainGUI extends JFrame{
 		levelMap.startMouseListener();
 	}
 	
+    public void changeColor(Animal correct){
+    	
+    	sidebar.remove(checklist);
+		checklist = theGame.getCurrentLevel().getChecklist().draw(correct);
+		sidebar.add(checklist);
+    }
+	
 	private void generateClickBoxes() {
 		clickBoxes.add(new MapClickBox(110,200,150,150,LocationType.FOREST));
 		clickBoxes.add(new MapClickBox(110,150,350,40,LocationType.VOLCANO));

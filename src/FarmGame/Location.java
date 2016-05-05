@@ -52,6 +52,7 @@ public class Location {
 		populateAnimals();
 		
 		LocationGUI gui = new LocationGUI( type, animals, maingui );
+		maingui.changeColor(correctAnimal);
 		return gui;
 	}
 	

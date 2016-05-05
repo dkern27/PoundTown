@@ -17,10 +17,17 @@ import javax.swing.border.TitledBorder;
 public class CheckListGUI extends JPanel {
 
 	private ArrayList<Animal> animals = new ArrayList<Animal>();
-
+	Animal correctAnimal;
 
 	public CheckListGUI( ArrayList<Animal> animals ){
 		this.animals = animals;
+		correctAnimal=null;
+		makeLayout();
+	}
+	
+	public CheckListGUI( ArrayList<Animal> animals , Animal correct){
+		this.animals = animals;
+		correctAnimal = correct;
 		makeLayout();
 	}
 
@@ -61,7 +68,12 @@ public class CheckListGUI extends JPanel {
 			Map attributes = font.getAttributes();
 			attributes.put(TextAttribute.STRIKETHROUGH, TextAttribute.STRIKETHROUGH_ON);
 			font = new Font(attributes);
+		} else if ( correctAnimal != null && animal.getDecimalValue() == correctAnimal.getDecimalValue()){
+			Map attributes = font.getAttributes();
+			attributes.put(TextAttribute.FOREGROUND, new Color(255,255,255));
+			font = new Font(attributes);
 		}
+		
 		
 		number.setFont(font);
 	    

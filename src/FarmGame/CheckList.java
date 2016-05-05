@@ -34,6 +34,10 @@ public class CheckList {
 		return gui;
 	}
 	
+	public CheckListGUI draw(Animal correct) {
+		CheckListGUI gui = new CheckListGUI( animals , correct);
+		return gui;
+	}
 	
 	
 ////// Getters and Setters //////
