@@ -68,7 +68,7 @@ public class CheckListGUI extends JPanel {
 			Map attributes = font.getAttributes();
 			attributes.put(TextAttribute.STRIKETHROUGH, TextAttribute.STRIKETHROUGH_ON);
 			font = new Font(attributes);
-		} else if ( correctAnimal != null && animal.getDecimalValue() == correctAnimal.getDecimalValue()){
+		} else if ( GameEngine.easyMode == true && correctAnimal != null && animal.getDecimalValue() == correctAnimal.getDecimalValue()){
 			Map attributes = font.getAttributes();
 			attributes.put(TextAttribute.FOREGROUND, new Color(255,255,255));
 			font = new Font(attributes);

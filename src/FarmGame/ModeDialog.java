@@ -13,9 +13,9 @@ import javax.swing.JPanel;
 import javax.swing.JTextArea;
 
 
-public class StartDialog extends JDialog{
+public class ModeDialog extends JDialog{
 
-	public StartDialog( ) {
+	public ModeDialog( ) {
 		setTitle("Welcome to #Town!");
 		setSize(500, 200);
 		setLocation(250,200);
@@ -26,13 +26,13 @@ public class StartDialog extends JDialog{
 		((JPanel)getContentPane()).setBackground(Color.CYAN);
 		
 		JPanel main = new JPanel();
-		JPanel button = new JPanel();
+		JPanel buttons = new JPanel();
 		
 		main.setBackground(Color.CYAN);
-		button.setBackground(Color.CYAN);
+		buttons.setBackground(Color.CYAN);
 		Font font = new Font("Comic Sans MS", Font.PLAIN, 20);
 		
-		JTextArea message = new JTextArea("Oh no! The tornado has swept away all your animals! Explore the island and find the animals on your list. To capture one, click on the animal with a binary number corresponding to a decimal number on your checklist.");
+		JTextArea message = new JTextArea("Would you like to play on Easy mode or Hard mode?");
 		
 	
 		message.setBackground(Color.CYAN);
@@ -44,20 +44,28 @@ public class StartDialog extends JDialog{
 		main.add(message);
 		
 		
-		JButton nextWindow = new JButton("OK!");
-		nextWindow.addActionListener(new ActionListener() {
+		JButton easy = new JButton("Easy");
+		easy.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
-				ModeDialog mode = new ModeDialog();
-				mode.setVisible(true);
+				GameEngine.easyMode=true;
+				CloseFrame();
+			}
+		});
+		
+		JButton hard = new JButton("Hard");
+		hard.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				GameEngine.easyMode=false;
 				CloseFrame();
 			}
 		});
 
 		
-		button.add(nextWindow);
+		buttons.add(easy);
+		buttons.add(hard);
 		
 		add(main);
-		add(button);
+		add(buttons);
 	}
 	
 	public void CloseFrame(){

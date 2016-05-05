@@ -8,6 +8,7 @@ public class GameEngine {
 	private ArrayList<Level> levels;
 	private int currentLevel;
 	private final int maxLevel = 4;
+	public static boolean easyMode = true;
 	
 	public GameEngine() {
 		currentLevel = 1;

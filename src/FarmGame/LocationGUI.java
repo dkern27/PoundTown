@@ -78,13 +78,7 @@ public class LocationGUI extends JPanel implements MouseListener {
 		for(Animal a : animals){
 			if (a.getRectangle().contains(e.getX(),e.getY())) {
 				if(maingui.getTheGame().getCurrentLevel().getChecklist().getChecklist().contains(a)){
-					if(a.getFound())
-						JOptionPane.showMessageDialog(this, "You already found this animal!","" , JOptionPane.INFORMATION_MESSAGE, new ImageIcon(getClass().getResource(a.getAnimalType().getFileName())));
-					else{
-						a.found();
 						JOptionPane.showMessageDialog(this, "Good Job! You found one of your animals!", "", JOptionPane.INFORMATION_MESSAGE, new ImageIcon(getClass().getResource(a.getAnimalType().getFileName())));
-						
-					}
 				}
 				else
 					JOptionPane.showMessageDialog(this, "Oops! That wasn't one of your animals!","", JOptionPane.PLAIN_MESSAGE);
