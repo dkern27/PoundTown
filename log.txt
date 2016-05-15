@@ -1,0 +1,861 @@
+* commit b4c911e8fdb0a286e6f23703dee827e947cdc1a4
+| Author: Dylan Kern <dkern@mines.edu>
+| Date:   Mon May 2 17:46:47 2016 -0600
+| 
+|     all Tests pass again
+|  
+* commit ca044cf0e57fe278eea48557f29df20679f57d68
+| Author: Dylan Kern <dkern@mines.edu>
+| Date:   Mon May 2 15:20:50 2016 -0600
+| 
+|     changed some text
+|  
+* commit 2daf9b9cfe8185e39aac6ab6eb08eb019ca32a57
+| Author: Dylan Kern <dkern@mines.edu>
+| Date:   Mon May 2 15:06:08 2016 -0600
+| 
+|     I DELETED GAMEOVER
+|  
+* commit a4865227bb39a785286d59220b2e8a066c530654
+| Author: Dylan Kern <dkern@mines.edu>
+| Date:   Mon May 2 15:01:39 2016 -0600
+| 
+|     TROPHY
+|  
+* commit d08c2f3c0eae6022da4bf0114482838035c52f93
+| Author: harryk333 <Harry@wl-dhcp201-172.Mines.EDU>
+| Date:   Mon May 2 14:53:36 2016 -0600
+| 
+|     Made trophy smaller
+|  
+* commit 35cfe54bda6b3cb0aac0d4d2875bc36c151dfafe
+| Author: harryk333 <Harry@wl-dhcp201-172.Mines.EDU>
+| Date:   Mon May 2 13:41:27 2016 -0600
+| 
+|     Added trophy image
+|  
+* commit 5b1b4f46cdd3f8b83f1b97ad454e18f5da8978c9
+| Author: harryk333 <Harry@wl-dhcp201-172.Mines.EDU>
+| Date:   Mon May 2 13:33:21 2016 -0600
+| 
+|     Compressed images a bit
+|  
+* commit 46ff32707068ec39b09a94f0679a1747cee394f4
+| Author: Dylan Kern <dkern@mines.edu>
+| Date:   Mon May 2 13:32:25 2016 -0600
+| 
+|     removed a variable yaya
+|  
+* commit 79dfd4e769eb3ce245c4e3c112bd5336b9dbce8c
+| Author: Dylan Kern <dkern@mines.edu>
+| Date:   Mon May 2 13:12:39 2016 -0600
+| 
+|     NO CHICKENS BOK
+|  
+* commit d56c507f82355a87b65737c42a1baf622490d97d
+| Author: Hanna Barringer <hbarring@mines.edu>
+| Date:   Mon May 2 13:11:07 2016 -0600
+| 
+|     Can also click on numbers now
+|  
+* commit bf63c2e1aef52ab371e373120dbae8ef29abb4c1
+| Author: Dylan Kern <dkern@mines.edu>
+| Date:   Mon May 2 13:10:24 2016 -0600
+| 
+|     CHICKENS CHICKENS CHICKENS BOK BOK
+|  
+* commit 80808e4368f2771eb241a907dc62cc4bdf208a4e
+| Author: Hanna Barringer <hbarring@mines.edu>
+| Date:   Mon May 2 13:00:04 2016 -0600
+| 
+|     uhh
+|    
+*   commit dca5cf3575a4023dfb6b07c3625783e00f4cd44d
+|\  Merge: f15f488 71c592d
+| | Author: Hanna Barringer <hbarring@mines.edu>
+| | Date:   Mon May 2 12:56:45 2016 -0600
+| | 
+| |     Merge remote-tracking branch 'origin/master'
+| |     
+| |     # Conflicts:
+| |     #	src/FarmGame/LocationGUI.java
+| |   
+| * commit 71c592d87720889115198d9f12d6d18dd61d0ba2
+| | Author: Dylan Kern <dkern@mines.edu>
+| | Date:   Mon May 2 12:53:49 2016 -0600
+| | 
+| |     PUSH
+| |   
+| * commit 6501da6104fa5e3286166d8ac9ae7c1d0bf74afc
+| | Author: Dylan Kern <dkern@mines.edu>
+| | Date:   Mon May 2 12:05:14 2016 -0600
+| | 
+| |     nothing
+| |   
+* | commit f15f488cd595c5227ceeb925b6ea5545c764cfc7
+| | Author: Hanna Barringer <hbarring@mines.edu>
+| | Date:   Mon May 2 12:55:28 2016 -0600
+| | 
+| |     location
+| |   
+* | commit 3a5a4598c4195aeda5f65dc71aacc6944c525256
+|/  Author: Hanna Barringer <hbarring@mines.edu>
+|   Date:   Mon May 2 12:54:32 2016 -0600
+|   
+|       animal locations
+|  
+* commit ba34b10e34a73ccdebd432e3da93573caa5ccd78
+| Author: Dylan Kern <dkern@mines.edu>
+| Date:   Mon May 2 12:02:16 2016 -0600
+| 
+|     new animal locations, color of animal text
+|  
+* commit b0ef899c432ea6a834792360b9719119d44657cf
+| Author: harryk333 <Harry@wl-dhcp201-172.Mines.EDU>
+| Date:   Mon May 2 11:58:01 2016 -0600
+| 
+|     Removed unused image
+|  
+* commit 9f039cfea7e02180a05a8e9e5a455d92ac8d5d1e
+| Author: harryk333 <Harry@wl-dhcp201-172.Mines.EDU>
+| Date:   Mon May 2 11:55:48 2016 -0600
+| 
+|     Cleaned up the game engine
+|  
+* commit fdbcd0042da96aee7c8eba3087882563c1a66a97
+| Author: Dylan Kern <dkern@mines.edu>
+| Date:   Mon May 2 11:55:19 2016 -0600
+| 
+|     colors~*~*~
+|  
+* commit 4b7f3c424ac023739c992e0968246ae7cb1e2abb
+| Author: harryk333 <Harry@wl-dhcp201-172.Mines.EDU>
+| Date:   Mon May 2 11:53:21 2016 -0600
+| 
+|     Fixed more stupid code
+|  
+* commit f4e40e758042b988a6a122b074fa81db09914bdd
+| Author: harryk333 <Harry@wl-dhcp201-172.Mines.EDU>
+| Date:   Mon May 2 11:48:21 2016 -0600
+| 
+|     I want to
+|  
+* commit 209a2b31aaaaf11b678a6669cc0b5c7da12d53da
+| Author: harryk333 <Harry@wl-dhcp201-172.Mines.EDU>
+| Date:   Mon May 2 11:46:23 2016 -0600
+| 
+|     Added thing for game over
+|  
+* commit 6c9630d9d878d237fa8e607c92128ed1505e747f
+| Author: harryk333 <Harry@wl-dhcp201-172.Mines.EDU>
+| Date:   Mon May 2 11:38:40 2016 -0600
+| 
+|     Fixed
+|  
+* commit 7a63c155286e92f3b7eb2a4f2005afaf66db68c1
+| Author: harryk333 <Harry@wl-dhcp201-172.Mines.EDU>
+| Date:   Mon May 2 11:30:43 2016 -0600
+| 
+|     level identifier actually updates, also removed more stupid code
+|  
+* commit 63f7d9d387bfb2bfca584371b3e5465212b8c77a
+| Author: Dylan Kern <dkern@mines.edu>
+| Date:   Mon May 2 11:11:32 2016 -0600
+| 
+|     Removed imports. less warnings
+|  
+* commit 522906c0c1b14228346063b18b1228356fad8645
+| Author: harryk333 <Harry@wl-dhcp201-172.Mines.EDU>
+| Date:   Mon May 2 09:56:21 2016 -0600
+| 
+|     Animals in locations are actually random every time now, dialogs are freaking out though
+|  
+* commit eb7a839c18367216c12346a1134f7c719869163c
+| Author: harryk333 <Harry@wl-dhcp201-172.Mines.EDU>
+| Date:   Mon May 2 09:47:34 2016 -0600
+| 
+|     Replaced some stupid code
+|  
+* commit 39dd712ebc3215c376319b55809048cb1e6f9e82
+| Author: harryk333 <Harry@wl-dhcp201-172.Mines.EDU>
+| Date:   Mon May 2 09:11:03 2016 -0600
+| 
+|     Animals are not drawn after being found
+|  
+* commit 335f1ec670d5d099600408a308f7f3957ecd96bf
+| Author: Hanna Barringer <hbarring@mines.edu>
+| Date:   Sun May 1 19:45:50 2016 -0600
+| 
+|     comments
+|  
+* commit f7e531c3b80b60761e01fa78ae6e7a6cba27707f
+| Author: Dylan Kern <dkern@mines.edu>
+| Date:   Sun May 1 19:42:53 2016 -0600
+| 
+|     Removed repetitive functions for finding animals. Can now move to new level.
+|  
+* commit 53349d9f3a1d4ec3b9e870ca0da29faf4469f5c1
+| Author: Dylan Kern <dkern@mines.edu>
+| Date:   Sun May 1 19:01:18 2016 -0600
+| 
+|     Made things private. Changed returning to level map.
+|  
+* commit c412e2abdea7da288f40d3baa6eff41d966b01e2
+| Author: Dylan Kern <dkern@mines.edu>
+| Date:   Sun May 1 17:15:45 2016 -0600
+| 
+|     made start dialog modal, changed font for numbers on animals, removed imports, added spacing for numbers over animals
+|  
+* commit 377a75e57a3a43ba83a37e5d2358e514544aa512
+| Author: Dylan Kern <dkern@mines.edu>
+| Date:   Sun May 1 16:58:11 2016 -0600
+| 
+|     checklist is sorted by number
+|  
+* commit 6e6b4fa4151488f29ede084e6e2d41bae83873e2
+| Author: Dylan Kern <dkern@mines.edu>
+| Date:   Sun May 1 16:50:35 2016 -0600
+| 
+|     Added dialogs after clicking an animal
+|  
+* commit 2295d523ac56cefa6d3e6cf45048053bccf76084
+| Author: Hanna Barringer <hbarring@mines.edu>
+| Date:   Sun May 1 16:16:21 2016 -0600
+| 
+|     Now crosses off animals when you find one on the checklist
+|  
+* commit 877f2780ffc128781c2776d961e0981d40fc0868
+| Author: Hanna Barringer <hbarring@mines.edu>
+| Date:   Sun May 1 15:39:32 2016 -0600
+| 
+|     dialog
+|  
+* commit 233c98c2860af215e229e0e82f1dfed7eb11efc4
+| Author: Brandon Green <brgreen@mymail.mines.edu>
+| Date:   Sun May 1 03:17:39 2016 -0600
+| 
+|     Checks to see if selected animal is in checklist or not. Have not implemented what happens if it is or isn't yet. Not sure what we wanted for that. Should be easy to add though.
+|  
+* commit 853014a7fca25bf8ce7fce7c3409e5b17b787a26
+| Author: Brandon Green <brgreen@mymail.mines.edu>
+| Date:   Sun May 1 02:55:12 2016 -0600
+| 
+|     Started mouselistener for LocationGui. Now if you click on an animal it goes back to the map
+|  
+* commit bb9c40d2e2ca5256cb18ed368224ec660e292587
+| Author: Hanna Barringer <hbarring@mines.edu>
+| Date:   Sat Apr 30 20:21:56 2016 -0600
+| 
+|     Changed max level to 4
+|  
+* commit 4cc5186c391bcf27ff1212e2315b8f3639200458
+| Author: Hanna Barringer <hbarring@mines.edu>
+| Date:   Sat Apr 30 20:06:34 2016 -0600
+| 
+|     Changed the welcome message to also have directions
+|    
+*   commit 2982e771803703eee5eb647e6712b45c13492ccf
+|\  Merge: 658c3ad b6bfca3
+| | Author: Hanna Barringer <hbarring@mines.edu>
+| | Date:   Sat Apr 30 19:56:56 2016 -0600
+| | 
+| |     Merge remote-tracking branch 'origin/master'
+| |     
+| |     # Conflicts:
+| |     #	src/FarmGame/MainGUI.java
+| |   
+| * commit b6bfca3a1dd0fcd29c3d369d8db4772060f50bd0
+| | Author: Harry Krantz <Harry@Harrys-Mac-Pro.local>
+| | Date:   Sat Apr 30 13:45:15 2016 -0600
+| | 
+| |     Some clean up and stuff
+| |   
+| * commit 210f1bcd17cb8afcc6c3f2b0409ad910d2d1c11d
+| | Author: Harry Krantz <Harry@Harrys-Mac-Pro.local>
+| | Date:   Sat Apr 30 13:30:50 2016 -0600
+| | 
+| |     I made the thing better
+| |   
+| * commit 5c022690a0a962923c6e61d193b4ce05f9930017
+| | Author: Harry Krantz <Harry@Harrys-Mac-Pro.local>
+| | Date:   Sat Apr 30 11:17:14 2016 -0600
+| | 
+| |     I did a thing
+| |   
+| * commit aadb673309013c01bc2ce82f3573aa4e63512658
+| | Author: Harry Krantz <Harry@Harrys-Mac-Pro.local>
+| | Date:   Sat Apr 30 08:14:32 2016 -0600
+| | 
+| |     Fixed window size so there's no whitespace
+| |   
+| * commit fc8f119021b5bb79c2965d3f1e45a293824882ff
+| | Author: Harry Krantz <Harry@Harrys-Mac-Pro.local>
+| | Date:   Sat Apr 30 08:12:38 2016 -0600
+| | 
+| |     Made windoe non resizable
+| |   
+* | commit 658c3adb3551e7913190e56d1a8b146daa5c0c62
+|/  Author: Hanna Barringer <hbarring@mines.edu>
+|   Date:   Sat Apr 30 19:50:23 2016 -0600
+|   
+|       MUAHAHAHAH SUCH NAVIGATION
+|    
+*   commit 09d569823a6e5f284a4b9559e2ce8a2876c1a32c
+|\  Merge: 57afe1b 32c6fdc
+| | Author: Dylan Kern <dkern@mines.edu>
+| | Date:   Fri Apr 29 20:13:05 2016 -0600
+| | 
+| |     Merge remote-tracking branch 'origin/master'
+| |   
+| * commit 32c6fdc525f7e50f7269466c7ecd329592e24347
+| | Author: Hanna Barringer <hbarring@mines.edu>
+| | Date:   Fri Apr 29 20:07:42 2016 -0600
+| | 
+| |     spelling, size
+| |     
+* |   commit 57afe1baa01525f0f2081f1c36cb6ead994ea993
+|\ \  Merge: ee9d702 11cda9f
+| |/  Author: Dylan Kern <dkern@mines.edu>
+|/|   Date:   Fri Apr 29 20:09:54 2016 -0600
+| |   
+| |       Merge branch 'dylansbranch'
+| |   
+| * commit 11cda9fef77b55be17ada276712683f179dc41b2
+|/  Author: Dylan Kern <dkern@mines.edu>
+|   Date:   Fri Apr 29 20:09:39 2016 -0600
+|   
+|       finished levelGUI mouselistener
+|  
+* commit ee9d70283a178701678ace6b6053a5ef992f2116
+| Author: Hanna Barringer <hbarring@mines.edu>
+| Date:   Fri Apr 29 19:30:53 2016 -0600
+| 
+|     Made it so the levels use a general map. Deleted PigMap,CowMap etc
+|  
+* commit b5683a5590826497b1615633ce4250ef83d63543
+| Author: Hanna Barringer <hbarring@mines.edu>
+| Date:   Fri Apr 29 18:53:15 2016 -0600
+| 
+|     Tried to implement switching between screens
+|  
+* commit 1164ec72d643760d205c405c5fa0be61a9564f0d
+| Author: Hanna Barringer <hbarring@mines.edu>
+| Date:   Fri Apr 29 18:32:41 2016 -0600
+| 
+|     Fixed some merge errors having to do with changing locations to map
+|    
+*   commit 990e0402649f48443b6e728d4ad46a25fd4ab832
+|\  Merge: 3ff007a 3301914
+| | Author: Hanna Barringer <hbarring@mines.edu>
+| | Date:   Fri Apr 29 18:14:15 2016 -0600
+| | 
+| |     Merge remote-tracking branch 'origin/master'
+| |     
+| |     # Conflicts:
+| |     #	src/FarmGame/Location.java
+| |     #	src/FarmGame/MainGUI.java
+| |   
+| * commit 33019146fb9cde33f29ec0f481e1ce7bc96d6347
+| | Author: Harry Krantz <Harry@Harrys-Mac-Pro.local>
+| | Date:   Fri Apr 29 17:04:21 2016 -0600
+| | 
+| |     f*** the police
+| |   
+| * commit 8a5df88af6a3ef3cd7a797bb8999bcf937433b8e
+| | Author: Dylan Kern <dkern@mines.edu>
+| | Date:   Fri Apr 29 13:34:42 2016 -0600
+| | 
+| |     Draws animals in locations now
+| |   
+| * commit 1c264b21ab142e0e72a7fd9d4a0917b4ed31a95f
+| | Author: Dylan Kern <dkern@mines.edu>
+| | Date:   Fri Apr 29 12:45:38 2016 -0600
+| | 
+| |     Uncommented test. removed repeated test
+| |   
+* | commit 3ff007a29676c69ba0470d3fd57f9427dec9db0f
+|/  Author: Hanna Barringer <hbarring@mines.edu>
+|   Date:   Fri Apr 29 18:10:57 2016 -0600
+|   
+|       Added map click box, changed locations to map
+|  
+* commit c8f624f16ad60a0733e569a063aa9e523df630e2
+| Author: Hanna Barringer <hbarring@mines.edu>
+| Date:   Fri Apr 29 09:47:54 2016 -0600
+| 
+|     added map click box
+|  
+* commit ff16f9028682d4439824ab36445c491679da3c4e
+| Author: Hanna Barringer <hbarring@mines.edu>
+| Date:   Fri Apr 29 09:37:29 2016 -0600
+| 
+|     added numbers, corrected spelling on map
+|  
+* commit 74c87140dc0e20fb2c4454b3e77658b5996bfcbd
+| Author: Dylan Kern <dkern@mines.edu>
+| Date:   Thu Apr 28 22:22:29 2016 -0600
+| 
+|     I forgot the slashes in some files
+|  
+* commit cf4da04810c2741cb0d08cf8894366a9b6e9f738
+| Author: Dylan Kern <dkern@mines.edu>
+| Date:   Thu Apr 28 22:20:19 2016 -0600
+| 
+|     Moved backgroundimages to src
+|    
+*   commit 4636b17d050e2fd62b926169fb12906a7212013a
+|\  Merge: 9dfa122 5ae011a
+| | Author: Dylan Kern <dkern@mines.edu>
+| | Date:   Thu Apr 28 22:18:50 2016 -0600
+| | 
+| |     Fixed conflicts cause ya. hanna did stuff that i didnt sync
+| |     
+| |     # Conflicts:
+| |     #	src/FarmGame/AnimalType.java
+| |     #	src/FarmGame/GameEngine.java
+| |     #	src/FarmGame/LocationType.java
+| |   
+| * commit 5ae011a78ba983139102f2935143fcad3c148465
+| | Author: Hanna Barringer <hbarring@mines.edu>
+| | Date:   Thu Apr 28 19:49:30 2016 -0600
+| | 
+| |     stuff
+| |   
+| * commit 22f7078d29e8b513770b56bce1640c80ba78db56
+| | Author: Hanna Barringer <hbarring@mines.edu>
+| | Date:   Thu Apr 28 19:14:23 2016 -0600
+| | 
+| |     Changed some working
+| |   
+| * commit 479b663babec13f9e25ce22966870efc26bf5901
+| | Author: Hanna Barringer <hbarring@mines.edu>
+| | Date:   Thu Apr 28 19:07:45 2016 -0600
+| | 
+| |     deleted some unnecessary images
+| |   
+| * commit f8013f8aa2755c45f5405dbd89b75fcacef08d26
+| | Author: Hanna Barringer <hbarring@mines.edu>
+| | Date:   Thu Apr 28 19:06:20 2016 -0600
+| | 
+| |     Added two start windows
+| |   
+| * commit e0ee9c556e53811e52e435251e96bd9f3ca350d3
+| | Author: Hanna Barringer <hbarring@mines.edu>
+| | Date:   Thu Apr 28 18:21:28 2016 -0600
+| | 
+| |     Added Pound Town to locations
+| |   
+| * commit 5b9ac7d9622d9721caeff00b988b800637840a3f
+| | Author: Hanna Barringer <hbarring@mines.edu>
+| | Date:   Thu Apr 28 18:08:07 2016 -0600
+| | 
+| |     resize
+| |   
+| * commit 24d6960cd987e3127e3e9e9f46f1c85fba1d455f
+| | Author: Hanna Barringer <hbarring@mines.edu>
+| | Date:   Thu Apr 28 18:07:56 2016 -0600
+| | 
+| |     Added maps for everything and resized to fit well
+| |   
+* | commit 9dfa1223f9f924e6483c4cd7b03a7ddc9780b7e7
+|/  Author: Dylan Kern <dkern@mines.edu>
+|   Date:   Thu Apr 28 22:13:01 2016 -0600
+|   
+|       Moved images to src folder so it works as a .jar. Removed animal drawFile parameter. Changed loading background images to work with .jar
+|  
+* commit 677a65cf86fbdab0312b84f9ab03f7591e396b31
+| Author: Dylan Kern <dkern@mines.edu>
+| Date:   Thu Apr 28 12:20:29 2016 -0600
+| 
+|     Draw animals maybe idk
+|  
+* commit a62e8bea06c75bcff69236b62380c7dffa218025
+| Author: Dylan Kern <dkern@mines.edu>
+| Date:   Thu Apr 28 12:03:29 2016 -0600
+| 
+|     animals function goodly
+|  
+* commit 29d22b72c64020b9e7e3d44a09330616813e5a28
+| Author: Harry Krantz <Harry@Harrys-Mac-Pro.local>
+| Date:   Thu Apr 28 07:19:41 2016 -0600
+| 
+|     Added level identifier to sidebar
+|  
+* commit 88b363e56f793d0201c781cf4deedc961845009f
+| Author: Harry Krantz <Harry@Harrys-Mac-Pro.local>
+| Date:   Thu Apr 28 06:47:53 2016 -0600
+| 
+|     Fixed checklist gui to use proper calling flow
+|  
+* commit 35e07a81f30a6dec7749dd67598230e47dac604d
+| Author: Harry Krantz <Harry@Harrys-Mac-Pro.local>
+| Date:   Thu Apr 28 06:28:17 2016 -0600
+| 
+|     Made the checklist not squished
+|  
+* commit f4adc5234b2fcf9c5c2056543e325fb103cc2958
+| Author: Hanna Barringer <hbarring@mines.edu>
+| Date:   Wed Apr 27 20:53:01 2016 -0600
+| 
+|     Added bg files to locations
+|  
+* commit 74a583d8c09d9871000babb163dfda6fd8ead828
+| Author: Hanna Barringer <hbarring@mines.edu>
+| Date:   Wed Apr 27 20:45:58 2016 -0600
+| 
+|     Added images to levels, resized window to fit. Now Checklist is squished
+|  
+* commit 3484aedccbed0489f68478716579bc882bd32b3f
+| Author: Hanna Barringer <hbarring@mines.edu>
+| Date:   Wed Apr 27 20:28:50 2016 -0600
+| 
+|     Added background image files
+|  
+* commit 806b594d6852334714622bb0eb08e8804840c877
+| Author: Dylan Kern <dkern@mines.edu>
+| Date:   Wed Apr 27 18:34:01 2016 -0600
+| 
+|     NOW
+|  
+* commit 8c9b1a28251ae271fba999810d120ff345040302
+| Author: Dylan Kern <dkern@mines.edu>
+| Date:   Wed Apr 27 18:32:40 2016 -0600
+| 
+|     ok now
+|  
+* commit 02ddd23775152ce0cbe8c00f60a5e2eff83929a3
+| Author: Dylan Kern <dkern@mines.edu>
+| Date:   Wed Apr 27 18:32:10 2016 -0600
+| 
+|     Added locationGUI. does not draw animals yet
+|  
+* commit 6b867f3f5b15298b161042147f5c7b44f832a5bf
+| Author: harryk333 <Harry@wl-dhcp193-108.Mines.EDU>
+| Date:   Wed Apr 27 15:47:05 2016 -0600
+| 
+|     Generate locations is done
+|  
+* commit 27a5380121de9193dcc9d739b6c45642014abdd2
+| Author: harryk333 <Harry@wl-dhcp193-108.Mines.EDU>
+| Date:   Wed Apr 27 15:38:34 2016 -0600
+| 
+|     Made it happy because it hates Dylan
+|  
+* commit f2550cd2f393a86f02c919a8d710f3cb43561146
+| Author: Dylan Kern <dkern@mines.edu>
+| Date:   Wed Apr 27 15:28:36 2016 -0600
+| 
+|     Added enum for locationtype
+|  
+* commit e36999e3bc6e6d042606c82fc65cdc87ffb608de
+| Author: harryk333 <Harry@wl-dhcp193-108.Mines.EDU>
+| Date:   Wed Apr 27 15:24:32 2016 -0600
+| 
+|     Checklist guy is freeking awesome balls now
+|  
+* commit aab012af2281b9b85091190c25354160f7b8e9c1
+| Author: harryk333 <Harry@wl-dhcp193-108.Mines.EDU>
+| Date:   Wed Apr 27 13:51:17 2016 -0600
+| 
+|     Changed checklist to strike through when found
+|  
+* commit 00e3bb655966a51d1e1d7470a99909bbe193583d
+| Author: Dylan Kern <dyl.kern@gmail.com>
+| Date:   Wed Apr 27 13:50:03 2016 -0600
+| 
+|     Delete Animal.sublime-workspace
+|  
+* commit 6ee1ab38af0c4fc444e2fb1a076d0301c32c937b
+| Author: Dylan Kern <dyl.kern@gmail.com>
+| Date:   Wed Apr 27 13:49:52 2016 -0600
+| 
+|     Delete .project.sublime-workspace
+|  
+* commit 10f7a8de68302c57beaf9bdd1ec43eadcdffbea4
+| Author: Dylan Kern <dkern@mines.edu>
+| Date:   Wed Apr 27 13:35:59 2016 -0600
+| 
+|     blah blah blah something something i fixed it
+|  
+* commit a37046378f0888aa879adc478884e10b7199c58f
+| Author: Hanna Barringer <hbarring@mines.edu>
+| Date:   Tue Apr 26 23:14:01 2016 -0600
+| 
+|     made a checkbox gui
+|  
+* commit 860f77630556e8f95ec44544ffc4cd277ae82f08
+| Author: Hanna Barringer <hbarring@mines.edu>
+| Date:   Tue Apr 26 20:53:13 2016 -0600
+| 
+|     off by one
+|  
+* commit 6a3f8a92944169df054a93d26315f8ca19b8854a
+| Author: Hanna Barringer <hbarring@mines.edu>
+| Date:   Tue Apr 26 20:52:39 2016 -0600
+| 
+|     fixed some stuff
+|  
+* commit bb7f39272bd67a960ff4f621ff926b35a1b6e316
+| Author: Hanna Barringer <hbarring@mines.edu>
+| Date:   Tue Apr 26 15:45:09 2016 -0600
+| 
+|     gave Levels possible animals to the location
+|  
+* commit b963f033b58ca891d4b2abaaf293e9de60eb3977
+| Author: Hanna Barringer <hbarring@mines.edu>
+| Date:   Tue Apr 26 15:40:37 2016 -0600
+| 
+|     Gave correct checklist to location
+|  
+* commit 3df5cec6223474a42d1bf8dc3bf6d8c3fc54a072
+| Author: Dylan Kern <dkern@mines.edu>
+| Date:   Tue Apr 26 15:39:04 2016 -0600
+| 
+|     Testing binary to decimal works
+|  
+* commit 7e326b6bd01b6c2c09e75dbcb491014540c6738e
+| Author: harryk333 <Harry@wl-dhcp198-7.Mines.EDU>
+| Date:   Tue Apr 26 15:24:43 2016 -0600
+| 
+|     Starting on generate locations function in level
+|  
+* commit 71a8dcb2db5cabeeeae64b88c4c0d26b23a98bd7
+| Author: Hanna Barringer <hbarring@mines.edu>
+| Date:   Tue Apr 26 15:17:54 2016 -0600
+| 
+|     nothing really
+|  
+* commit fdb1f34c3d11b3310f665f846b7fd95607b711fa
+| Author: harryk333 <Harry@wl-dhcp198-7.Mines.EDU>
+| Date:   Tue Apr 26 15:17:24 2016 -0600
+| 
+|     Same thing for level something or other
+|  
+* commit cf8d23334e844ebf0b9e6098a36704e74be05d61
+| Author: Dylan Kern <dkern@mines.edu>
+| Date:   Tue Apr 26 15:17:16 2016 -0600
+| 
+|     I dunno a getter
+|  
+* commit 5b49848536310d00f40c3b3e50b85c5b46789104
+| Author: harryk333 <Harry@wl-dhcp198-7.Mines.EDU>
+| Date:   Tue Apr 26 15:09:48 2016 -0600
+| 
+|     All General Tests now pass
+|  
+* commit 8b00db46fdddc9ab7aade7dd58c7a850d6ef8e3e
+| Author: harryk333 <Harry@wl-dhcp198-7.Mines.EDU>
+| Date:   Tue Apr 26 15:09:07 2016 -0600
+| 
+|     Same thing in checklist
+|  
+* commit e9a9b8c27bcbe0174c9bb3ea8d550c08007ce8d3
+| Author: harryk333 <Harry@wl-dhcp198-7.Mines.EDU>
+| Date:   Tue Apr 26 15:08:19 2016 -0600
+| 
+|     Actually initialize animals list in level
+|  
+* commit be1774da906ba2cd74273884c2012ef012dbd094
+| Author: Hanna Barringer <hbarring@mines.edu>
+| Date:   Tue Apr 26 14:58:19 2016 -0600
+| 
+|     fixed MORE test errors
+|  
+* commit e5ab5525d461ef8e9ec7477031eb3e8d07d886c4
+| Author: harryk333 <Harry@wl-dhcp198-7.Mines.EDU>
+| Date:   Tue Apr 26 14:58:14 2016 -0600
+| 
+|     NextLevel test will pass soon
+|  
+* commit 02ed459d144431c60d8e7876c9ec11f9811e1751
+| Author: harryk333 <Harry@wl-dhcp198-7.Mines.EDU>
+| Date:   Tue Apr 26 14:44:00 2016 -0600
+| 
+|     More stuff in level
+|  
+* commit b53681e16a4fae243979ce9da56c6be5012eaed3
+| Author: Dylan Kern <dkern@mines.edu>
+| Date:   Tue Apr 26 14:43:32 2016 -0600
+| 
+|     Added two comments
+|  
+* commit a81d390a14ee0ea6b9b374794a7ad212cf8ff50f
+| Author: harryk333 <Harry@wl-dhcp198-7.Mines.EDU>
+| Date:   Tue Apr 26 14:41:50 2016 -0600
+| 
+|     Updated constructor in LEvel
+|  
+* commit cf5eab7c005848b1fd45639479a683fce53df716
+| Author: Dylan Kern <dkern@mines.edu>
+| Date:   Tue Apr 26 14:34:01 2016 -0600
+| 
+|     Update checklist class
+|  
+* commit cd22816b1a7b60f7cb420b51da4c808831e58b7d
+| Author: harryk333 <Harry@wl-dhcp198-7.Mines.EDU>
+| Date:   Tue Apr 26 14:28:37 2016 -0600
+| 
+|     NO MORE PLAYAZ
+|  
+* commit f8c615f3533a4c48d1d6fe4430b32b4919368748
+| Author: harryk333 <Harry@wl-dhcp198-7.Mines.EDU>
+| Date:   Tue Apr 26 14:27:49 2016 -0600
+| 
+|     Hanna!
+|  
+* commit 56d873f33d304dfa6dda56c3a48f75f262c9df9b
+| Author: Hanna Barringer <hbarring@mines.edu>
+| Date:   Tue Apr 26 14:26:03 2016 -0600
+| 
+|     level
+|    
+*   commit da6ae544b8c5fc18420e03ae72c1cc3d21d50f08
+|\  Merge: 598597c d62d48c
+| | Author: Hanna Barringer <hbarring@mines.edu>
+| | Date:   Tue Apr 26 14:25:25 2016 -0600
+| | 
+| |     fixed stupid conflict
+| |     
+| |     # Conflicts:
+| |     #	src/FarmGame/Level.java
+| |   
+| * commit d62d48cb615f0a6243c4249ec4fe9188f20ba1e6
+| | Author: harryk333 <Harry@wl-dhcp198-7.Mines.EDU>
+| | Date:   Tue Apr 26 14:24:03 2016 -0600
+| | 
+| |     Fixed
+| |   
+| * commit d505fd20f6173fabcd179b38b33df75775ea4b5c
+| | Author: Dylan Kern <dkern@mines.edu>
+| | Date:   Tue Apr 26 14:21:42 2016 -0600
+| | 
+| |     fixe conflicts
+| |   
+| * commit 8b5fdcefaa6412283e427e98ab173bc5f0d4be71
+| | Author: Dylan Kern <dkern@mines.edu>
+| | Date:   Tue Apr 26 14:19:53 2016 -0600
+| | 
+| |     Changed player to checklist
+| |   
+* | commit 598597c80f0295fae42a53de44d861cc1ff0c3c2
+|/  Author: Hanna Barringer <hbarring@mines.edu>
+|   Date:   Tue Apr 26 14:23:24 2016 -0600
+|   
+|       deleted decimalToBinary in Level game
+|    
+*   commit 9014333f2952963066c19215bd675c0d0e124ea6
+|\  Merge: 14115ce a9ee92d
+| | Author: Hanna Barringer <hbarring@mines.edu>
+| | Date:   Tue Apr 26 14:17:41 2016 -0600
+| | 
+| |     fixed conflicts in Level?
+| |   
+| * commit a9ee92daaba193ca5a8afe076cbcebcb0a0786f3
+| | Author: harryk333 <Harry@wl-dhcp198-7.Mines.EDU>
+| | Date:   Tue Apr 26 14:14:22 2016 -0600
+| | 
+| |     Level now generate list of animals
+| |   
+| * commit 1260126d01874366e73e27e561c03dc93b4b28b0
+| | Author: harryk333 <Harry@wl-dhcp198-7.Mines.EDU>
+| | Date:   Tue Apr 26 13:50:35 2016 -0600
+| | 
+| |     Edited animal images
+| |   
+* | commit 14115ce3ea65aa9e959b6a8438cc9f3b182296c2
+|/  Author: Hanna Barringer <hbarring@mines.edu>
+|   Date:   Tue Apr 26 14:15:13 2016 -0600
+|   
+|       Fixed some tests, took out binary tests for level
+|    
+*   commit 9b830447b6a61ca2fbec6663f44965e08ddfff29
+|\  Merge: 5f83303 2628aef
+| | Author: unknown <hbarring@MZ026-58.adit.mines.edu>
+| | Date:   Tue Apr 26 12:17:30 2016 -0600
+| | 
+| |     Merge branch 'master' of https://github.com/dkern27/PoundTown
+| |   
+| * commit 2628aef9769e47ca5aecdcb30457b12dc52cc5fb
+| | Author: Dylan Kern <dkern@mines.edu>
+| | Date:   Tue Apr 26 12:11:55 2016 -0600
+| | 
+| |     Implemented animal and location except for draw functions
+| |   
+| * commit 5d3b211082850a11df87d19f86bc24c25ac57636
+| | Author: harryk333 <Harry@wl-dhcp198-7.Mines.EDU>
+| | Date:   Tue Apr 26 12:10:41 2016 -0600
+| | 
+| |     LevelGUI now works
+| |   
+* | commit 5f83303de1a869c4c29ed1dccaddba646605d9cc
+|/  Author: unknown <hbarring@MZ026-58.adit.mines.edu>
+|   Date:   Tue Apr 26 12:16:43 2016 -0600
+|   
+|       added checklist GUI, not yet implemented
+|  
+* commit 67ae2bd9a5f07a21737d2f3de47b25190b411fda
+| Author: harryk333 <Harry@wl-dhcp198-7.Mines.EDU>
+| Date:   Tue Apr 26 12:09:19 2016 -0600
+| 
+|     Working on level stuff
+|  
+* commit 94d456e0bf845ff3544c230d58815e402a4ac067
+| Author: unknown <brgreen@MZ026-57.adit.mines.edu>
+| Date:   Tue Apr 26 11:47:15 2016 -0600
+| 
+|     Implemented the foundAll method in Player class
+|  
+* commit 032e676fd565b63ebeb0e5b4f90d9596ee7d85ff
+| Author: harryk333 <Harry@Harrisons-MacBook-Pro.local>
+| Date:   Mon Apr 25 20:44:38 2016 -0600
+| 
+|     Added a main guy which now opens an empty window. hooray.
+|  
+* commit b899bbf7c58ed010e3fc1141b7f97217ce36e392
+| Author: harryk333 <Harry@Harrisons-MacBook-Pro.local>
+| Date:   Mon Apr 25 20:34:30 2016 -0600
+| 
+|     Worked on stuff in GameEngine, gameOver test now passes
+|    
+*   commit e0c73edb1e969cc46eb7b292ac89b9da4b005bc3
+|\  Merge: f3691a0 221f499
+| | Author: Hanna Barringer <hbarring@mines.edu>
+| | Date:   Thu Apr 21 20:56:02 2016 -0600
+| | 
+| |     Fixed conflicts
+| |   
+| * commit 221f499da46602f23dba21e9372ffdbc158b1a83
+| | Author: Dylan Kern <dkern@mines.edu>
+| | Date:   Thu Apr 21 18:54:42 2016 -0600
+| | 
+| |     Added testing random values of animals
+| |   
+| * commit 3a954a03576098fda0c962d934570e048d86dca1
+| | Author: unknown <brgreen@CT156-09.adit.mines.edu>
+| | Date:   Thu Apr 21 15:28:03 2016 -0600
+| | 
+| |     Finished most level tests. Only one more to go.
+| |   
+* | commit f3691a0d840da25050a1013ea9df7d82c666d2d6
+|/  Author: Hanna Barringer <hbarring@mines.edu>
+|   Date:   Thu Apr 21 20:41:08 2016 -0600
+|   
+|       fixed errors in General Tests
+|  
+* commit f18b6c186731dbcf173babe494c7375dd343f1bc
+| Author: Dylan Kern <dkern@mines.edu>
+| Date:   Thu Apr 21 12:19:40 2016 -0600
+| 
+|     Added files back
+|  
+* commit 47e21b2947ac5d77cfc1b33c1036b5c5303734b4
+| Author: Dylan Kern <dyl.kern@gmail.com>
+| Date:   Thu Apr 21 12:17:40 2016 -0600
+| 
+|     Create .gitignore
+|  
+* commit 398d19bc8a9ac81c62ee0b5c410ab0d704a576a6
+  Author: Dylan Kern <dyl.kern@gmail.com>
+  Date:   Thu Apr 21 12:17:21 2016 -0600
+  
+      Initial commit
